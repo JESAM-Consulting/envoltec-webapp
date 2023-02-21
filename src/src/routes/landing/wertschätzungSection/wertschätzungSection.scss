@@ -1,0 +1,415 @@
+@import '../../../styles/mixins/global.scss';
+
+.wertschätzung-section-all-content-alignment {
+    position: relative;
+    z-index: 999;
+
+    .box {
+        border: 1px solid #D3D3D3;
+        border-radius: 19px;
+        padding: 20px 40px 0 40px;
+
+        @include breakpoint("max-sm") {
+            padding: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 415px;
+            gap: 0;
+
+            @include breakpoint("max-md") {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include breakpoint("max-sm") {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .grid-items:nth-child(1) {
+                border-right: 0.5px solid #C2C2C2;
+                padding: 0 34px;
+
+                @include breakpoint("max-sm") {
+                    border-right: none;
+                    border-bottom: 0.5px solid #C2C2C2;
+                    padding: 0 22px;
+
+                }
+            }
+
+            .mobile-view-information-set {
+                display: none;
+
+                @include breakpoint("max-sm") {
+                    display: block;
+                }
+
+                p {
+                    font-weight: 500;
+                    font-size: 13px;
+                    line-height: 16px;
+                    text-align: center;
+                    margin: 0 0 16px 0;
+                    color: #000000;
+                }
+
+                .information-arrow-design {
+                    display: flex;
+                    align-items: center;
+                    padding: 0 0 16px 0;
+                    justify-content: center;
+
+                    img {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .button-design {
+                padding: 30px 0 0 0;
+
+                @include breakpoint("max-sm") {
+                    padding: 10px 0 16px 0;
+                }
+
+                button {
+                    border: none;
+                    color: #fff;
+                    width: 100%;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 16px;
+                    background: #9DBC78;
+                    border-radius: 1px;
+                    cursor: pointer;
+                    text-align: center;
+                    font-family: 'Montserrat', sans-serif;
+
+                    color: #F8F9FB;
+
+                    padding: 15px;
+                }
+            }
+
+            .checkbox-all-content-alignment {
+                padding: 4px 0 0 0;
+                display: flex;
+                align-items: center;
+                gap: 22px;
+
+                @include breakpoint("max-sm") {
+                    gap: 11px;
+                    align-items: flex-start;
+                }
+
+                .relativ-div {
+                    position: relative;
+
+                    span {
+                        display: block;
+                        font-weight: 400;
+                        font-size: 10px;
+                        line-height: 16px;
+                        color: #ABABAB;
+                        font-family: "VisbyCF-Regular";
+
+                        @include breakpoint("max-sm") {
+                            font-size: 9px;
+                            line-height: 16px;
+                        }
+
+                        a {
+                            color: #9DBC78;
+                        }
+                    }
+                }
+            }
+
+            .all-input-style-box-design {
+                padding: 30px 0 0 0;
+
+                .input {
+                    padding: 0 0 20px 0;
+
+                    &.select-width {
+                        width: 120px;
+                    }
+
+                    label {
+                        font-weight: 300;
+                        font-size: 15px;
+                        line-height: 18px;
+                        font-family: 'Montserrat', sans-serif;
+                        display: block;
+                        color: #000000;
+
+                        @include breakpoint("max-sm") {
+                            font-size: 12px;
+                            line-height: 15px;
+                        }
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 25px;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid #000000;
+                        font-size: 15px;
+                        line-height: 18px;
+                        font-family: 'Montserrat', sans-serif;
+
+                        @include breakpoint("max-sm") {
+                            height: 20px;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                    }
+
+                    select {
+                        width: 100%;
+                        height: 25px;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid #000000;
+                        font-size: 15px;
+                        line-height: 18px;
+                        font-family: 'Montserrat', sans-serif;
+
+                        @include breakpoint("max-sm") {
+                            height: 20px;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                    }
+
+                    ::placeholder {
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 15px;
+                        line-height: 18px;
+
+                    }
+                }
+            }
+
+            .sec-grid {
+                display: grid;
+                grid-template-columns: 68px 1fr;
+                align-items: center;
+                gap: 10px;
+
+                @include breakpoint("max-sm") {
+                    grid-template-columns: repeat(1 , 1fr);
+                    gap: 0;
+                }
+                .sec-grid-items:nth-child(1) {
+                    @include breakpoint("max-sm") {
+                        display: none;
+                    }
+                }
+                .sec-grid-items {
+                    padding: 30px 0 0 0;
+                    @include breakpoint("max-sm") {
+                        padding: 50px 0 0 0;
+                    }
+                    .all-logo-alignment {
+                        padding: 0 0 50px 0;
+
+                        @include breakpoint("max-sm") {
+                            padding: 0;
+                            display: flex;
+                            gap: 20px;
+                        }
+
+                        .sec-logo {
+                            span {
+                                display: block;
+                                font-weight: 300;
+                                font-size: 10px;
+                                line-height: 16px;
+                                font-family: "VisbyCF-Regular";
+                                color: #000000;
+                                padding: 0 0 10px 0;
+
+                                @include breakpoint("max-sm") {
+                                    font-size: 8px;
+                                    line-height: 12px;
+                                }
+                            }
+
+                            p {
+                                display: block;
+                                font-weight: 300;
+                                font-size: 8px;
+                                line-height: 13px;
+                                font-family: "VisbyCF-Regular";
+                                color: #000000;
+                                margin: 10px 0 0 0;
+
+                                @include breakpoint("max-sm") {
+                                    font-size: 8px;
+                                    line-height: 12px;
+                                    margin: 5px 0 0 0;
+                                }
+
+                            }
+                        }
+
+                        .first-logo {
+                            padding: 0 0 20px 0;
+
+                            @include breakpoint("max-sm") {
+                                padding: 0;
+                            }
+
+                            span {
+                                display: block;
+                                font-weight: 300;
+                                font-size: 10px;
+                                line-height: 16px;
+                                font-family: "VisbyCF-Regular";
+                                color: #000000;
+                                padding: 0 0 20px 0;
+
+                                @include breakpoint("max-sm") {
+                                    font-size: 8px;
+                                    line-height: 12px;
+                                }
+
+                            }
+
+                            img {
+                                max-width: 121px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .icon-text-alignment {
+                .icon-text-grid:nth-child(2) {
+                    .icon-text-grid-items {
+                        span {
+                            max-width: 221px;
+                        }
+                    }
+                }
+
+                .icon-text-grid:last-child {
+                    padding: 0;
+
+                    .icon-text-grid-items {
+                        span {
+                            max-width: 136px;
+                            @include breakpoint("max-sm") {
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .icon-text-grid {
+                    display: grid;
+                    grid-template-columns: 68px 1fr;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 0 0 24px 0;
+
+                    @include breakpoint("max-sm") {
+                        grid-template-columns: 60px 1fr;
+                        gap: 10px;
+                    }
+                    .icon-text-grid-items:nth-child(1) {
+                        @include breakpoint("max-sm") {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                    .icon-text-grid-items {
+                        img {
+                            @include breakpoint("max-sm") {
+                                max-width: 40px;
+                            }
+                        }
+                        p {
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: #515151;
+                            margin: 0 0 10px 0;
+
+                            @include breakpoint("max-sm") {
+                                font-size: 13px;
+                                line-height: 16px;
+                            }
+                        }
+
+                        span {
+                            display: block;
+                            font-weight: 400;
+                            font-size: 13px;
+                            line-height: 16px;
+                            max-width: 157px;
+                            color: #515151;
+
+                            @include breakpoint("max-sm") {
+                                font-size: 10px;
+                                line-height: 12px;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .grid-items:nth-child(2) {
+                padding-left: 75px;
+
+                @include breakpoint("max-md") {
+                    padding-left: 20px;
+                }
+
+                @include breakpoint("max-sm") {
+                    padding: 55px 18px 69px 18px;
+                }
+
+
+            }
+        }
+
+        .box-header-alignment {
+            display: flex;
+            padding: 0 0 50px 0;
+            align-content: center;
+            gap: 11px;
+
+            @include breakpoint("max-sm") {
+                padding: 33px 25px 28px 25px;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+
+                span {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #000;
+
+                    @include breakpoint("max-sm") {
+                        font-size: 11px;
+                        line-height: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+// @use  '';
+@use "../mixins/breakpoint.scss" as bp;
+$bp: (
+  base: 0px,
+  sm: 540px,
+  md: 992px,
+  lg: 1280px,
+);
+
+
+@import '../mixins/breakpoint.scss';
+
+.container-md {
+  max-width: calc(1024px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-sm") {
+    padding: 0 30px;
+  }
+}
+
+.container{
+  max-width: calc(966px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+  @include breakpoint("max-sm") {
+    padding: 0 30px;
+  }
+}
+
+.footer-container {
+  max-width: calc(880px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+  @include breakpoint("max-sm") {
+    padding: 0 30px;
+  }
+}
+
+.container-md-2 {
+  max-width: 1258px;
+  padding: 0 20px;
+  margin: 0 auto;
+  @include breakpoint("max-sm") {
+    padding: 0 30px;
+  }
+}
+
+.container-md-3 {
+  max-width: calc(981px + 40px);
+  padding: 0 20px;
+  @include breakpoint("max-sm") {
+    padding: 0 30px;
+  }
+  margin: 0 auto;
+}
+
+.container-md-4 {
+  max-width: calc(1160px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+  @include breakpoint("max-sm") {
+    padding: 0 30px;
+  }
+}
+
+.container-lg {
+  max-width: calc(1334px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-sm") {
+    padding: 0 30px;
+  }
+}

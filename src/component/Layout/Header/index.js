@@ -1,10 +1,10 @@
 import React from "react";
 import "./header.scss";
 import Logo from "../../../assets/logo/logo.svg";
-import {useHistory  } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 export default function Header() {
 
-  const navigate = useHistory();
+  const navigate = useHistory()
 
   const handleOnClickAuthenticate = () => {
     if (window.location.pathname !== "/") {

@@ -1,0 +1,69 @@
+@forward "./breakpoint.scss";
+@forward './columns.scss';
+@forward  './typography.scss';
+
+.defult-layout-set {
+    height: calc(100vh - 145px);
+    overflow: auto;
+    @include breakpoint("max-xl") {
+    height: calc(100vh - 115px);
+    }
+
+    @include breakpoint("max-md") {
+        height: auto;
+        min-height: calc(100vh - 266px);
+        overflow: unset;
+    }
+    
+}
+
+input[type=checkbox]+label {
+    display: block;
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]+label:before {
+    content: "✔";
+    border: 1px solid #C2C2C2;
+    border-radius: 2px;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    color: transparent;
+    transition: 0.2s;
+    font-size: 12px !important;
+    justify-content: center;
+    align-items: center;
+}
+
+
+input[type=checkbox]:checked+label:before {
+    background: #9DBC78;
+    border: 1px solid #C2C2C2 !important;
+    color: #fff;
+}
+
+input[type=checkbox]:checked+label:after {
+    display: block;
+    position: absolute;
+    top: 11px;
+    left: 16px;
+    width: 4px;
+    height: 10px;
+    border: 1px solid none !important;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,64 @@
+@import '../../styles/mixins/global.scss';
+
+
+.landing-first-section {
+    .profile-image-center-alignment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 8px 0;
+
+        img {
+            max-width: 122px;
+            cursor: pointer;
+            max-height: 58px;
+        }
+
+    }
+
+    .text-style {
+        padding: 4px 0 40px 0;
+
+        @include breakpoint("max-xl") {
+            padding: 4px 0 20px 0;
+        }
+        span {
+            display: block;
+            font-weight: 400;
+            font-size: 8px;
+            line-height: 10px;
+            padding: 0 0 12px 0;
+            text-align: center;
+            color: #000000;
+        }
+
+        h6 {
+            font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+font-family: "VisbyCF-Medium";
+
+color: #000000;
+max-width: 882px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            margin: 0 0 24px 0;
+            color: #000000;
+        }
+    }
+
+    .rating-alignment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        img {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@import '../../styles/mixins/global.scss';
+
+.home-first-section {
+    .profile-image-center-alignment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 8px 0;
+
+        img {
+            max-width: 122px;
+            cursor: pointer;
+            max-height: 58px;
+
+            @include breakpoint("max-xl") {
+                max-width: 98px;
+            }
+
+            @include breakpoint("max-sm") {
+                max-width: 80px;
+            }
+        }
+
+    }
+
+    .text-style {
+        padding: 4px 0 25px 0;
+
+        @include breakpoint("max-xl") {
+            padding: 4px 0 20px 0;
+        }
+
+        @include breakpoint("max-sm") {
+            padding: 4px 0 30px 0;
+        }
+
+        span {
+            display: block;
+            font-weight: 400;
+            font-size: 8px;
+            line-height: 10px;
+            padding: 0 0 12px 0;
+            text-align: center;
+            color: #000000;
+
+            @include breakpoint("max-sm") {
+                font-weight: 400;
+                font-size: 7px;
+                line-height: 9px;
+                padding: 0 0 5px 0;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            margin: 0;
+            color: #000000;
+
+            @include breakpoint("max-sm") {
+                font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+            }
+        }
+    }
+
+    .rating-alignment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+
+        @include breakpoint("max-sm") {
+            gap: 2px;
+        }
+
+        img {
+            cursor: pointer;
+
+            @include breakpoint("max-sm") {
+                max-width: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@import '../../../styles/mixins/global.scss';
+
+.finance-gmbh-all-content-alignment {
+    background-image: url("../../../assets/images/banner.png");
+    width: 100%;
+    padding: 64px 0;
+    background-position: center;
+    background-size: cover;
+    @include breakpoint("max-sm") {
+        background-image: url("../../../assets/images/mobile-banner.png");
+        padding: 247px 0 53px 0;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 567px;
+        gap: 40px;
+
+        @include breakpoint("max-md") {
+            grid-template-columns: 1fr 357px;
+            gap: 0;
+        }
+        .grid-items {
+            button {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+  font-family: 'Montserrat', sans-serif;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                background: #9DBC78;
+                padding: 22px;
+
+                @include breakpoint("max-md") {
+                    padding: 11px;
+                    font-size: 12px;
+line-height: 22px;
+                }
+
+                @include breakpoint("max-sm") {
+                    padding: 11px 21px;
+                }
+            }
+            h3 {
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 60px;
+                color: #2E2E2E;
+                margin: 0 0 10px 0;
+                @include breakpoint("max-md") {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+
+                @include breakpoint("max-sm") {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+            p {
+                margin: 0 0 20px 0;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                color: #2E2E2E;
+
+                @include breakpoint("max-md") {
+                    font-size: 10px;
+line-height: 15px;
+                }
+                @include breakpoint("max-sm") {
+                    max-width: 301px;
+                }
+            }
+        }
+    }
+}

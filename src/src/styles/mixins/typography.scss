@@ -1,0 +1,21 @@
+@use '../mixins/breakpoint.scss';
+
+@font-face {
+  font-family: "VisbyBold";
+  src: url("../../assets/fonts/VisbyBold.otf");
+}
+
+@font-face {
+  font-family: "VisbyCF-Regular";
+  src: url("../../assets/fonts/VisbyCF-Regular.otf");
+}
+
+@font-face {
+  font-family: "VisbyExtrabold";
+  src: url("../../assets/fonts/VisbyExtrabold.otf");
+}
+
+@font-face {
+  font-family: "VisbyCF-Medium";
+  src: url("../../assets/fonts/VisbyCF-Medium.otf");
+}

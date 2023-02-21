@@ -1,0 +1,115 @@
+@import '../../../styles/mixins/global.scss';
+
+.all-text-section-content-alignment {
+    padding: 100px 0 87px 0;
+
+    @include breakpoint("max-sm") {
+        padding: 35px 0 100px 0;
+    }
+    .button-center-alignment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+            border: none;
+            color: #fff;
+            padding: 12px 37px;
+            background: #9DBC78;
+            font-size: 18px;
+            line-height: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            height: 70px;
+            @include breakpoint("max-sm") {
+                padding: 12px 11px;
+                height: auto;
+                font-size: 16px;
+                line-height: 16px;
+                height: auto;
+                min-width: 210px;
+            }
+
+
+            span {
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: 400;
+                @include breakpoint("max-sm") {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .grid {
+        display: grid;
+        gap: 40px 55px;
+        padding: 0 0 60px 0;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include breakpoint("max-sm") {
+            grid-template-columns: repeat(1 , 1fr);
+            padding: 0 13px 30px 13px;
+            gap: 60px;
+        }
+
+        .grid-items {
+            .sub-grid {
+                display: grid;
+                grid-template-columns: 53px 1fr;
+                gap: 44px;
+
+                @include breakpoint("max-md") {
+                    gap: 20px;
+                    grid-template-columns: repeat(1 , 1fr);
+                }
+                .sub-grid-items {
+                    p {
+                        font-weight: 700;
+                        font-size: 16px;
+                        margin: 0 0 12px 0;
+                        line-height: 30px;
+                        color: #000;
+
+                        @include breakpoint("max-sm") {
+                            font-weight: 700;
+font-size: 14px;
+line-height: 20px;
+                        }
+                    
+                        
+                    }
+
+                    span {
+                        display: block;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 20px;
+                        /* or 167% */
+
+
+                        color: #000000;
+
+                        @include breakpoint("max-sm") {
+                            font-size: 10px;
+line-height: 18px;
+                        }
+
+                    }
+
+                    .icon {
+                        width: 53px;
+                        height: 53px;
+                        background: #9DBC78;
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
