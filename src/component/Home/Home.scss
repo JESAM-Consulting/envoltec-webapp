@@ -1,0 +1,736 @@
+@import "../../styles/mixins/global.scss";
+
+.envoltec-section {
+  padding: 54px 0 0 0;
+
+  @include breakpoint(max-md) {
+    padding: 46px 0 0 0;
+  }
+
+  @include breakpoint(max-sm) {
+    padding: 37px 0 0 0;
+  }
+  .envoltec-alignment {
+    h2 {
+      @include font20-bold;
+      color: #000000;
+      text-align: center;
+      @include breakpoint(max-md) {
+        font-size: 14px;
+      }
+
+      @include breakpoint(max-sm) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+      p {
+        font-weight: 400;
+        color: #757575;
+      }
+    }
+    .bottom-arrow-alignment {
+      padding: 19px 0 28px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include breakpoint(max-md) {
+        padding: 17px 0;
+      }
+
+      @include breakpoint(max-sm) {
+        padding: 10px 0 72px 0;
+      }
+    }
+
+    .envoltecMain-img-alignment {
+      width: 100%;
+      height: 603px;
+      @include breakpoint(max-md) {
+        height: 367px;
+      }
+
+      @include breakpoint(max-sm) {
+        height: 186px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+    .envoltecMain-child-details-alignment {
+      padding: 0 50px;
+      @include breakpoint(max-md) {
+        padding: 0;
+      }
+      .envoltecMain-button-alignment {
+        @include breakpoint(max-md) {
+          padding: 46px 0 0 0;
+        }
+
+        @include breakpoint(max-md) {
+          padding: 20px 0 0 0;
+        }
+        padding: 62px 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        button {
+          max-width: 250px;
+          width: 250px;
+          height: 66px;
+          background: #df4539;
+          border: 1px solid #df4539;
+          @include font20-bolder;
+          color: #ffffff;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include breakpoint(max-md) {
+            max-width: 200px;
+            width: 200px;
+            height: 50px;
+            font-size: 14px;
+            line-height: 22px;
+          }
+
+          @include breakpoint(max-md) {
+            max-width: 150px;
+            width: 150px;
+            height: 40px;
+            font-size: 11px;
+            line-height: 22px;
+          }
+          &:last-child {
+            background: transparent;
+            color: #df4539;
+          }
+        }
+      }
+
+      .envoltecMain-otion-details-alignment {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+        padding: 76px 0 0 0;
+
+        @include breakpoint(max-md) {
+          gap: 40px;
+          padding: 63px 0 0 0;
+        }
+
+        @include breakpoint(max-sm) {
+          gap: 40px;
+          grid-template-columns: 1fr;
+          padding: 36px 0 0 63px;
+        }
+        .envoltecMain-gridItem-alignment {
+          .option-name-alignment {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+
+            .option-heading-name {
+              h4 {
+                @include font20-bolder;
+                line-height: 24px;
+                color: #000000;
+
+                @include breakpoint(max-md) {
+                  font-size: 14px;
+                  line-height: 17px;
+                }
+              }
+            }
+          }
+
+          .option-details-alignment {
+            padding: 10px 0 0 0;
+            p {
+              @include font14-normal;
+              color: #2e2e2e;
+              @include breakpoint(max-md) {
+                font-size: 10px;
+                line-height: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .envoltecMain-person-details-alignment {
+    @include breakpoint(max-md) {
+      margin: 74px 0 0 0;
+      background: linear-gradient(
+        270deg,
+        #f0f0f0 51.67%,
+        rgba(240, 240, 240, 0.378099) 68.61%,
+        rgba(240, 240, 240, 0) 100%
+      );
+    }
+    .envoltecMain-grid-alignment {
+      display: grid;
+      grid-template-columns: 368px 1fr;
+      gap: 105px;
+      align-items: flex-end;
+      @include breakpoint(max-md) {
+        gap: 39px;
+        grid-template-columns: 206px 1fr;
+      }
+      @include breakpoint(max-sm) {
+        grid-template-columns: 1fr;
+      }
+
+      .envoltecMain-gridItem-alignment {
+        .person-img-alignment {
+          width: 100%;
+          height: 100%;
+          @include breakpoint(max-sm) {
+            display: none;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+          }
+        }
+
+        .envoltecMain-person-all-details-alignment {
+          padding: 0 0 46px 0;
+          @include breakpoint(max-md) {
+            padding: 0 0 38px 0;
+          }
+          @include breakpoint(max-sm) {
+            padding: 0 0 40px 0;
+          }
+          h4 {
+            @include font36-bold;
+            color: #30353e;
+            padding: 0 0 6px 0;
+            @include breakpoint(max-md) {
+              font-size: 20px;
+              line-height: 35px;
+              padding: 0 0 14px 0;
+            }
+          }
+
+          .envoltecMain-person-child-details-alignment {
+            p {
+              @include font16-normal;
+              color: #42546c;
+              padding: 0 0 20px 0;
+              @include breakpoint(max-md) {
+                font-size: 10px;
+                line-height: 14px;
+                padding: 0 0 10px 0;
+              }
+            }
+          }
+
+          .envoltec-button-alignment {
+            @include breakpoint(max-md) {
+              padding: 4px 0 0 0;
+            }
+            button {
+              background: #df4438;
+              padding: 22px 37px;
+              @include font16-bolder;
+              color: #ffffff;
+              cursor: pointer;
+              border: none;
+              @include breakpoint(max-md) {
+                font-size: 10px;
+                line-height: 14px;
+                padding: 12px 20px;
+              }
+              @include breakpoint(max-sm) {
+                font-size: 10px;
+                line-height: 14px;
+                padding: 8px 19.5px;
+                font-size: 10px;
+                line-height: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bearatungsportfolio-section {
+    padding: 28px 0 0 0;
+    @include breakpoint(max-md) {
+      padding: 186px 0 0 0;
+    }
+    @include breakpoint(max-sm) {
+      padding: 26px 0 0 0;
+    }
+
+    .bearatungsportfolio-grid-alignment {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 80px;
+      align-items: center;
+
+      @include breakpoint("max-md") {
+        grid-template-columns: 1fr 400px;
+        gap: 20px;
+        align-items: flex-start;
+      }
+
+      @include breakpoint("max-sm") {
+        grid-template-columns: 1fr;
+      }
+      .bearatungsportfolio-gridItem-alignment {
+        height: 100%;
+        .bearatungsportfolio-heading-alignment {
+          h5 {
+            @include font30;
+            color: #df4539;
+
+            @include breakpoint(max-md) {
+              font-size: 16px;
+              line-height: 22px;
+            }
+          }
+          p {
+            padding: 18px 0 0 0;
+            @include font40-bolder;
+            color: #818181;
+
+            @include breakpoint(max-md) {
+              font-size: 32px;
+              line-height: 22px;
+            }
+          }
+        }
+
+        .bearatungsportfolio-steps-alignment {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 50px 18px;
+          padding: 80px 0 0 0;
+
+          @include breakpoint(max-md) {
+            padding: 30px 0 0 0;
+            gap: 30px 18px;
+          }
+
+          .bearatungsportfolio-steps-details-alignment {
+            .mobile-view-person-img-alignment {
+              display: none;
+
+              @include breakpoint("max-sm") {
+                display: block;
+              }
+            }
+            h6 {
+              @include font44-meduim;
+              color: #df4539;
+            }
+
+            .steps-child-details {
+              padding: 10px 0 0 0;
+
+              p {
+                @include font12-normal;
+                color: #30353e;
+                padding: 3px 0 0 0;
+
+                @include breakpoint(max-md) {
+                  font-size: 9px;
+                  line-height: 14px;
+                }
+              }
+
+              span {
+                @include font14-bold;
+                color: #30353e;
+              }
+            }
+          }
+        }
+
+        .bearatungsportfolio-side-details-alignment {
+          position: relative;
+          height: 100%;
+          .bearatungsportfolio-side-img-alignment {
+            height: 100%;
+            img {
+              height: 100%;
+              @include breakpoint("max-sm") {
+                height: 495px;
+              }
+            }
+          }
+
+          .bearatungsportfolio-banner-details-alignment {
+            position: absolute;
+            top: 143px;
+            left: 90px;
+
+            @include breakpoint(max-md) {
+              top: 117px;
+              left: 56px;
+            }
+
+            @include breakpoint(max-sm) {
+              top: 91px;
+              left: 15px;
+            }
+            h5 {
+              @include font32;
+              color: #df4539;
+              @include breakpoint(max-md) {
+                font-size: 20px;
+                line-height: 18px;
+              }
+            }
+
+            p {
+              padding: 12px 0 0 0;
+              @include font40-bolder;
+              color: #ffffff;
+
+              @include breakpoint(max-md) {
+                font-size: 36px;
+                line-height: 26px;
+              }
+            }
+
+            .other-details-alignment {
+              padding: 23px 0 0 0;
+              max-width: 415px;
+              @include breakpoint(max-md) {
+                max-width: 327px;
+              }
+
+              @include breakpoint(max-sm) {
+                max-width: 291px;
+                padding: 0 10px 0 0;
+              }
+              p {
+                @include font20-bold;
+                line-height: 22px;
+                color: #ffffff;
+                padding: 0 0 15px 0;
+
+                @include breakpoint(max-md) {
+                  font-size: 14px;
+                  line-height: 22px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .liste-banner-section {
+    margin: 19px 0 0 0;
+    background: #df4438;
+    padding: 50px 20px 40px 20px;
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint(max-md) {
+      padding: 40px 0;
+    }
+
+    @include breakpoint(max-sm) {
+      margin: 16px 0 0 0;
+      padding: 41px 0;
+    }
+    .liste-banner-details-alignemnt {
+      h6 {
+        @include font40-normal;
+        color: #ffffff;
+
+        @include breakpoint(max-md) {
+          font-size: 24px;
+          line-height: 24px;
+        }
+
+        @include breakpoint(max-sm) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include font20-normal;
+        color: #ffffff;
+        cursor: pointer;
+
+        @include breakpoint(max-md) {
+          padding: 10px 0 0 0;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  .solar-details-section {
+    background: url("../../assets/images/solarBg.png");
+    width: 100%;
+    height: 433px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 100px 0 0;
+    border-bottom: 1px solid #df4438;
+    @include breakpoint(max-md) {
+      height: 260px;
+    }
+
+    @include breakpoint(max-sm) {
+      display: block;
+      padding: 0;
+      background: url("../../assets/images/mobile-img.png");
+      background-repeat: no-repeat;
+      height: 100%;
+      display: none;
+    }
+    .solar-details-alignment {
+      max-width: 514px;
+
+      @include breakpoint(max-md) {
+        max-width: 292px;
+      }
+
+      @include breakpoint(max-sm) {
+        // display: none;
+      }
+      h5 {
+        @include font36-bold;
+        color: #df4539;
+
+        @include breakpoint(max-md) {
+          font-size: 20px;
+          line-height: 32px;
+        }
+      }
+
+      p {
+        padding: 20px 0 0 0;
+        @include font16-normal;
+        color: #000000;
+        @include breakpoint(max-md) {
+          padding: 2px 0 0 0;
+          font-size: 10px;
+          line-height: 17px;
+        }
+      }
+
+      .solar-button-alignment {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 40px 0 0 0;
+        button {
+          padding: 22px 37px;
+          border: 1px solid #df4539;
+          @include font16-bolder;
+          color: #df4539;
+          cursor: pointer;
+          background: transparent;
+
+          @include breakpoint(max-md) {
+            padding: 9px 21px;
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-solar-view {
+    display: none;
+
+    @include breakpoint("max-sm") {
+      display: block;
+    }
+    .mobile-solar-details-section {
+      display: none;
+
+      @include breakpoint("max-sm") {
+        display: block;
+        padding: 0;
+        background: url("../../assets/images/mobile-img.png");
+        background-repeat: no-repeat;
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    .solar-details-alignment {
+      width: 100%;
+      padding: 26px 30px;
+      h5 {
+        @include font36-bold;
+        color: #df4539;
+
+        @include breakpoint(max-md) {
+          font-size: 20px;
+          line-height: 32px;
+        }
+      }
+
+      p {
+        padding: 20px 0 0 0;
+        @include font16-normal;
+        color: #000000;
+        @include breakpoint(max-md) {
+          padding: 2px 0 0 0;
+          font-size: 10px;
+          line-height: 17px;
+        }
+      }
+
+      .solar-button-alignment {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 0 0 0;
+        button {
+          padding: 22px 37px;
+          border: 1px solid #df4539;
+          @include font16-bolder;
+          color: #df4539;
+          cursor: pointer;
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  .jetzt-bewerben-section {
+    padding: 78px 0;
+
+    @include breakpoint(max-md) {
+      padding: 106px 0 76px 0;
+    }
+
+    @include breakpoint(max-sm) {
+      padding: 26px 0 69px 0;
+    }
+    .jetzt-bewerben-heading {
+      text-align: center;
+      h6 {
+        @include font48-bolder;
+        color: #df4438;
+
+        @include breakpoint(max-md) {
+          font-size: 36px;
+          line-height: 52px;
+        }
+
+        @include breakpoint(max-sm) {
+          font-size: 20px;
+          line-height: 34px;
+        }
+      }
+    }
+    .contact-bg {
+      background: linear-gradient(
+        270deg,
+        #f0f0f0 51.67%,
+        rgba(240, 240, 240, 0.378099) 68.61%,
+        rgba(240, 240, 240, 0) 100%
+      );
+      height: 449px;
+      width: 50%;
+      position: absolute;
+      right: 0;
+
+      @include breakpoint("max-md") {
+        display: none;
+      }
+    }
+
+    .contact-form-alignment {
+      background: #ffffff;
+      box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+      padding: 47px;
+      width: 451px;
+      margin: 40px auto 0;
+
+      @include breakpoint(max-md) {
+        padding: 40px;
+      }
+
+      @include breakpoint(max-sm) {
+        width: 100%;
+        margin: 20px auto;
+      }
+      .contact-form-heading-alignment {
+        h5 {
+          @include text18-normal;
+          color: #000000;
+        }
+
+        p {
+          padding: 5px 0 0 0;
+          @include font14-normal;
+          font-weight: 300;
+          line-height: 15px;
+          color: #000000;
+          @include breakpoint(max-md) {
+            padding: 10px 0 0 0;
+          }
+        }
+      }
+
+      .contact-form-details-alignment {
+        padding: 20px 0 0 0;
+        @include breakpoint(max-md) {
+          padding: 18px 0 0 0;
+        }
+        .two-grid-alignment {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
+        .contact-gridItem-alignment {
+          &.one-grid-alignment {
+            padding: 10px 0 0 0;
+          }
+          input {
+            padding: 10px 0;
+            border: none;
+            border-bottom: 0.5px solid #000000;
+            @include font14-normal;
+            font-weight: 300;
+            color: #000000;
+            width: 100%;
+            &::placeholder {
+              color: #000000;
+            }
+
+            @include breakpoint(max-md) {
+              font-weight: 300;
+              font-size: 12px;
+              line-height: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

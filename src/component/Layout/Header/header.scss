@@ -1,0 +1,149 @@
+@import "../../../styles/mixins/global.scss";
+
+.header-section {
+  //   position: sticky;
+  //   top: 0;
+  //   z-index: 99;
+  background-image: url("../../../assets/images/header-bg.png");
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .header-alignment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 64px 50px 0 0;
+    @include breakpoint(max-md) {
+      padding: 58px 0 0 0;
+    }
+    @include breakpoint(max-sm) {
+      align-items: flex-start;
+      gap: 64px;
+    }
+    .logo-alignment {
+      img {
+        max-width: 100%;
+        height: 100%;
+      }
+    }
+
+    .header-details-alignment {
+      display: flex;
+      align-items: center;
+      gap: 67px;
+      
+      @include breakpoint(max-md) {
+        gap: 21px;
+      }
+      @include breakpoint(max-sm) {
+        gap: 21px;
+        flex-wrap: wrap;
+      }
+
+      .header-nav-alignment {
+        @include breakpoint(max-sm) {
+          order: 2;
+        }
+        ul {
+          display: flex;
+          align-items: center;
+          list-style: none;
+          gap: 68px;
+          @include breakpoint(max-md) {
+            gap: 21px;
+          }
+          li {
+            @include text18-bolder;
+            color: #000000;
+            cursor: pointer;
+            white-space: nowrap;
+            @include breakpoint("max-md") {
+              @include font14-bolder;
+            }
+            @include breakpoint("max-sm") {
+              font-size: 10px;
+              line-height: 12px;
+            }
+          }
+        }
+      }
+
+      .jetzt-details-alignment {
+        background: #df4438;
+        padding: 15px 37px 22px 37px;
+        text-align: center;
+        padding: 12px 20px;
+        @include breakpoint(max-sm) {
+          order: 1;
+        }
+        h6 {
+          @include font20-bolder;
+          color: #ffffff;
+          @include breakpoint("max-md") {
+            @include font14-bolder;
+          }
+        }
+
+        p {
+          @include font15-normal;
+          color: #ffffff;
+
+          @include breakpoint("max-md") {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  .heading-alignment {
+    padding: 78px 0 0 0;
+    max-width: 1030px;
+    margin: auto;
+    @include breakpoint(max-md) {
+      padding: 46px 0 0 0;
+      max-width: 556px;
+    }
+
+    @include breakpoint(max-sm) {
+      padding: 43px 0 0 0;
+      max-width: 274px;
+    }
+    h1 {
+      text-align: center;
+      span {
+        @include font64-bolder;
+        color: #df4539;
+        display: block;
+
+        @include breakpoint(max-md) {
+          font-size: 48px;
+          line-height: 50px;
+          &:last-child {
+            padding: 0 0 16px 0;
+          }
+        }
+
+        @include breakpoint(max-sm) {
+          font-size: 24px;
+          line-height: 24px;
+        }
+      }
+
+      @include font50-normal;
+      color: #000000;
+
+      @include breakpoint(max-md) {
+        font-size: 24px;
+        line-height: 34px;
+      }
+
+      @include breakpoint(max-sm) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+}
