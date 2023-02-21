@@ -185,6 +185,7 @@
     }
 
     @include breakpoint("max-sm") {
+      margin: 0;
       background: linear-gradient(
         360deg,
         #f0f0f0 51.67%,
@@ -227,7 +228,7 @@
             padding: 0 0 38px 0;
           }
           @include breakpoint(max-sm) {
-            padding: 0 0 40px 0;
+            padding: 0 0 40px 20px;
           }
           h4 {
             @include font36-bold;
@@ -289,7 +290,7 @@
       padding: 186px 0 0 0;
     }
     @include breakpoint(max-sm) {
-      padding: 26px 0 0 0;
+      padding: 26px 0 0 10px;
     }
 
     .bearatungsportfolio-grid-alignment {
