@@ -710,6 +710,7 @@
         .contact-gridItem-alignment {
           &.one-grid-alignment {
             padding: 10px 0 0 0;
+            position: relative;
           }
           input {
             padding: 10px 0;
@@ -728,6 +729,57 @@
               font-size: 12px;
               line-height: 15px;
             }
+          }
+
+          .icon-alignment {
+            position: absolute;
+            top: 18px;
+            right: 10px;
+
+            img {
+              width: 13px;
+              height: 13px;
+              display: block;
+              cursor: pointer;
+            }
+          }
+
+          .dropdown-box-alignment {
+            position: absolute;
+            top: 51px;
+            width: 100%;
+            height: auto;
+            background: #ffffff;
+            padding: 10px 20px;
+            z-index: 99;
+            border-radius: 10px;
+            .dropdown-details-alignment {
+              border-bottom: 0.5px solid #000000;
+              &:last-child {
+                border-bottom: none;
+              }
+              p {
+                @include font14-normal;
+                font-weight: 300;
+                padding: 10px 0;
+              }
+            }
+          }
+        }
+
+        .conatct-button-alignment {
+          padding: 14px 0 0 0;
+          button {
+            background: #df4438;
+            border-radius: 5px;
+            font-family: "Inter";
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 18px;
+            color: #ffffff;
+            padding: 8px 20px;
+            border: none;
+            cursor: pointer;
           }
         }
       }

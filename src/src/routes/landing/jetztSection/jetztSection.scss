@@ -1,0 +1,94 @@
+@import '../../../styles/mixins/global.scss';
+
+.jetzt-section-all-content-alignment {
+    margin: 86px 0 0 0;
+    padding: 145px 0 80px 0;
+    background: #9DBC78;
+
+    @include breakpoint("max-md") {
+        padding: 59px 0;
+    }
+
+    @include breakpoint("max-sm") {
+        margin: 37px 0 0 0;
+        padding: 42px 0;
+    }
+
+    .button-center-alignment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            border: none;
+            color: #000;
+            padding: 12px 37px;
+            background: #FFFFFF;
+            font-size: 18px;
+            line-height: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            height: 70px;
+
+            @include breakpoint("max-sm") {
+                padding: 11px 37px;
+                font-size: 18px;
+                line-height: 16px;
+                height: auto;
+            }
+
+            span {
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: 400;
+
+                @include breakpoint("max-sm") {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 49px;
+        text-align: center;
+        font-family: "VisbyBold";
+
+        color: #FFFFFF;
+
+        @include breakpoint("max-md") {
+            font-size: 24px;
+            line-height: 38px;
+        }
+
+        @include breakpoint("max-sm") {
+            font-size: 15px;
+            line-height: 23px;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 49px;
+        text-align: center;
+        font-family: "VisbyCF-Regular";
+        margin: 0 0 40px 0;
+        color: #FFFFFF;
+
+        @include breakpoint("max-md") {
+            font-size: 24px;
+            line-height: 38px;
+            margin: 0 0 30px 0;
+        }
+
+        @include breakpoint("max-sm") {
+            font-size: 15px;
+            line-height: 23px;
+            margin: 0 0 20px 0;
+        }
+    }
+}

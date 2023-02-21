@@ -1,0 +1,70 @@
+@import '../../styles/mixins/global.scss';
+
+.header-design {
+    padding: 20px 0 ;
+
+    @include breakpoint("max-sm") {
+        padding: 35px 0 22px 0;
+    }
+
+    .first-logo-content-alignment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+
+        @include breakpoint("max-sm") {
+            gap: 22px;
+        }
+
+        div:last-child {
+            img {
+                max-width: 72px;
+                height: 80px;
+
+                @include breakpoint("max-sm") {
+                    max-width: 45px;
+                    height: 50px;
+                }
+            }
+        }
+
+        div:first-child {
+            max-width: 114px;
+        }
+
+        div:nth-child(2) {
+            img {
+                display: none;
+
+                @include breakpoint("max-sm") {
+                    display: block;
+                }
+            }
+        }
+
+        .lbm-logo {
+            width: 113px;
+            height: 40px;
+        }
+        div {
+            img {
+                cursor: pointer;
+           
+                
+            }
+
+            span {
+                font-size: 49px;
+                line-height: 60px;
+                display: block;                
+                color: #000000; 
+                cursor: pointer;
+
+                @include breakpoint("max-sm") {
+                    display: none;
+                }
+            }
+        }
+    }
+}

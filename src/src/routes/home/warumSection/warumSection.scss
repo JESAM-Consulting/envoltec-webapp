@@ -1,0 +1,98 @@
+@import '../../../styles/mixins/global.scss';
+
+.warum-all-section-content-alignment {
+    .page-title {
+        padding: 0 0 25px 0;
+
+        @include breakpoint("max-xl") {
+            padding: 0 0 20px 0;
+        }
+        @include breakpoint("max-sm") {
+            padding: 0 0 34px 0;
+        }
+        p {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 25px;
+            color: #000;
+            text-align: center;
+
+            @include breakpoint("max-sm") {
+                font-size: 16px;
+line-height: 25px;
+            }
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 39px;
+
+        @include breakpoint("max-sm") {
+            gap: 20px;
+            grid-template-columns: repeat(1 , 1fr);
+            padding: 0 0 56px 0;
+        }
+
+        .grid-items {
+            background: #FFFFFF;
+            border: 1px solid #9DBC78;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 1px;
+            display: flex;
+            align-items: center;
+
+            .sub-grid {
+                display: grid;
+                grid-template-columns: 60px 1fr 30px;
+                justify-content: space-between;
+                gap: 20px;
+                align-items: center;
+
+                @include breakpoint("max-sm") {
+                    grid-template-columns: 80px 1fr 30px;
+                    gap: 10px;
+                }
+                .sub-grid-items {
+                    &.icon-center-alignment {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .round {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        border: 1px solid rgba(169, 89, 89, 0.4);
+
+                    }
+
+                    p {
+                        font-weight: 600;
+                        font-size: 17.5px;
+                        line-height: 21px;
+                        margin: 0;
+                        color: #9DBC78;
+                    
+                        @include breakpoint("max-xl") {
+                            font-size: 13px;
+                            line-height: 22px;
+                        }
+
+                        @include breakpoint("max-sm") {
+                            font-size: 10px;
+line-height: 12px;
+
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}
