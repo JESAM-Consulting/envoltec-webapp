@@ -65,7 +65,7 @@ export default function Home() {
 
   const handleOnClickAuthenticate = () => {
     if (window.location.pathname !== "/") {
-      navigate.push("/");
+      navigate.push("/#contactForm");
     }
   };
   const bindInput = (value) => {
@@ -209,7 +209,11 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="envoltec-button-alignment">
+
+                    <a href="#contactForm" onClick={handleOnClickAuthenticate}>
                     <button>Mehr zu FE Finance erfahren</button>
+
+                </a>
                   </div>
                 </div>
               </div>
@@ -354,7 +358,9 @@ export default function Home() {
               Stromversorgung so einfachwie möglich gestaltet werden.
             </p>
             <div className="solar-button-alignment">
-              <button>Jetzt bewerben</button>
+              <a href="#contactForm" onClick={handleOnClickAuthenticate}>
+                  <button>Jetzt bewerben</button>
+                </a>
             </div>
           </div>
         </div>
