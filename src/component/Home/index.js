@@ -5,6 +5,7 @@ import DownArrowBlackIcon from "../../assets/icons/down-arrow.svg";
 import RightArrowIcon from "../../assets/icons/rightArrow.svg";
 import EnvoltecImg from "../../assets/images/envoltec-img.png";
 import PersonImg from "../../assets/images/person-img.png";
+import MobilePersonImg from "../../assets/images/mobileView-peson.png";
 import BroschureImg from "../../assets/images/Broschure.png";
 import WhiteRightArrowIcon from "../../assets/icons/right-white.svg";
 import { useHistory, useNavigate } from "react-router-dom";
@@ -20,12 +21,14 @@ export default function Home() {
   const [dropOneValue, setDropOneValue] = useState("");
   const [dropTwoValue, setDropTwoValue] = useState("");
   const [teamData, setTeamData] = useState({
-    userName:"",postalCode:"",email:"",phone:""
+    userName: "",
+    postalCode: "",
+    email: "",
+    phone: "",
   });
   const [errors, setErrors] = useState({});
 
-
-  console.log("errors",errors);
+  console.log("errors", errors);
 
   const formValidation = () => {
     let formvalied = true;
@@ -50,18 +53,16 @@ export default function Home() {
       formvalied = false;
       errors["dropdownone"] = "*Bitte überprüfen Sie ihre Eingabe";
     }
-   
-    if (!dropTwoValue ) {
-      formvalied = false;
-      errors["dropdowntwo"] = "*Bitte überprüfen Sie ihre Eingabe";
+    if (dropOneValue === "yes") {
+      if (!dropTwoValue) {
+        formvalied = false;
+        errors["dropdowntwo"] = "*Bitte überprüfen Sie ihre Eingabe";
+      }
     }
-   
-   
+
     setErrors(errors);
     return formvalied;
   };
-
-
 
   const handleOnClickAuthenticate = () => {
     if (window.location.pathname !== "/") {
@@ -87,8 +88,7 @@ export default function Home() {
   console.log("teamdata", teamData);
 
   const submitForm = async () => {
-    if(formValidation()){
-
+    if (formValidation()) {
       let data = {
         userName: teamData?.userName,
         email: teamData?.email,
@@ -97,11 +97,15 @@ export default function Home() {
         isSales: dropOneValue === "yes" ? true : false,
         workYears: dropTwoValue,
       };
-      await ApiPost(`applyNow`, data)
-      .then((res) => {
-        toast.success("Vielen Dank, Ihre Daten wurden erfolgreich eingereicht.");
+      await ApiPost(`applyNow`, data).then((res) => {
+        toast.success(
+          "Vielen Dank, Ihre Daten wurden erfolgreich eingereicht."
+        );
         setTeamData({
-          userName:"",postalCode:"",email:"",phone:""
+          userName: "",
+          postalCode: "",
+          email: "",
+          phone: "",
         });
         setDropOneValue("");
         setDropTwoValue("");
@@ -111,8 +115,7 @@ export default function Home() {
 
   return (
     <div>
-
-<ToastContainer />
+      <ToastContainer />
 
       <div className="envoltec-section">
         <div className="container">
@@ -125,60 +128,74 @@ export default function Home() {
             <div className="bottom-arrow-alignment">
               <img src={DownArrowIcon} alt="DownArrowIcon" />
             </div>
+          </div>
+        </div>
+        <div className="envoltecMain-img-alignment">
+          <div className="container">
+            <div className="envoltecMain-video-alignment">
+              <iframe
+                src="https://player.vimeo.com/video/800816128?h=99ef65f16a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                // style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                title="Envoltec"
+              ></iframe>
 
-            <div className="envoltecMain-img-alignment">
-              <img src={EnvoltecImg} alt="EnvoltecImg" />
+              <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
-            <div className="envoltecMain-child-details-alignment">
-              <div className="envoltecMain-button-alignment">
-                <a href="#contactForm" onClick={handleOnClickAuthenticate}>
-                  <button>Jetzt bewerben</button>
-                </a>
-                <button>mehr zu Envoltec</button>
-              </div>
+          </div>
+        </div>
+        <div className="envoltecMain-child-details-alignment">
+          <div className="container">
+            <div className="envoltecMain-button-alignment">
+              <a href="#contactForm" onClick={handleOnClickAuthenticate}>
+                <button>Jetzt bewerben</button>
+              </a>
+              <button className="second-button">mehr zu Envoltec</button>
+            </div>
 
-              <div className="envoltecMain-otion-details-alignment">
-                <div className="envoltecMain-gridItem-alignment">
-                  <div className="option-name-alignment">
-                    <div>
-                      <img src={RightArrowIcon} alt="RightArrowIcon" />
-                    </div>
-                    <div className="option-heading-name">
-                      <h4>Voll-/Teilzeit und selbständig</h4>
-                    </div>
+            <div className="envoltecMain-otion-details-alignment">
+              <div className="envoltecMain-gridItem-alignment">
+                <div className="option-name-alignment">
+                  <div>
+                    <img src={RightArrowIcon} alt="RightArrowIcon" />
                   </div>
-                  <div className="option-details-alignment">
-                    <p>
-                      flexible Arbeitszeiten unbefristete Einstellung nach
-                      Probezeit
-                    </p>
+                  <div className="option-heading-name">
+                    <h4>Voll-/Teilzeit und selbständig</h4>
                   </div>
                 </div>
-                <div className="envoltecMain-gridItem-alignment">
-                  <div className="option-name-alignment">
-                    <div>
-                      <img src={RightArrowIcon} alt="RightArrowIcon" />
-                    </div>
-                    <div className="option-heading-name">
-                      <h4>Home-Office</h4>
-                    </div>
+                <div className="option-details-alignment">
+                  <p>
+                    flexible Arbeitszeiten unbefristete Einstellung nach
+                    Probezeit
+                  </p>
+                </div>
+              </div>
+              <div className="envoltecMain-gridItem-alignment">
+                <div className="option-name-alignment">
+                  <div>
+                    <img src={RightArrowIcon} alt="RightArrowIcon" />
                   </div>
-                  <div className="option-details-alignment">
-                    <p>Flexible Arbeitsorteund mobiles Arbeiten</p>
+                  <div className="option-heading-name">
+                    <h4>Home-Office</h4>
                   </div>
                 </div>
-                <div className="envoltecMain-gridItem-alignment">
-                  <div className="option-name-alignment">
-                    <div>
-                      <img src={RightArrowIcon} alt="RightArrowIcon" />
-                    </div>
-                    <div className="option-heading-name">
-                      <h4>Standort unabhängig</h4>
-                    </div>
+                <div className="option-details-alignment">
+                  <p>Flexible Arbeitsorteund mobiles Arbeiten</p>
+                </div>
+              </div>
+              <div className="envoltecMain-gridItem-alignment">
+                <div className="option-name-alignment">
+                  <div>
+                    <img src={RightArrowIcon} alt="RightArrowIcon" />
                   </div>
-                  <div className="option-details-alignment">
-                    <p>über 25 Standorte in Deutschland moderne Offices</p>
+                  <div className="option-heading-name">
+                    <h4>Standort unabhängig</h4>
                   </div>
+                </div>
+                <div className="option-details-alignment">
+                  <p>über 25 Standorte in Deutschland moderne Offices</p>
                 </div>
               </div>
             </div>
@@ -209,11 +226,9 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="envoltec-button-alignment">
-
                     <a href="#contactForm" onClick={handleOnClickAuthenticate}>
-                    <button>Mehr zu FE Finance erfahren</button>
-
-                </a>
+                      <button>Mehr zu FE Finance erfahren</button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -298,7 +313,7 @@ export default function Home() {
 
                   <div className="bearatungsportfolio-steps-details-alignment">
                     <div className="mobile-view-person-img-alignment">
-                      <img src={PersonImg} alt="PersonImg" />
+                      <img src={MobilePersonImg} alt="MobilePersonImg" />
                     </div>
                   </div>
                 </div>
@@ -359,8 +374,8 @@ export default function Home() {
             </p>
             <div className="solar-button-alignment">
               <a href="#contactForm" onClick={handleOnClickAuthenticate}>
-                  <button>Jetzt bewerben</button>
-                </a>
+                <button>Jetzt bewerben</button>
+              </a>
             </div>
           </div>
         </div>
@@ -497,77 +512,80 @@ export default function Home() {
                     <div className="dropdown-box-alignment">
                       <div
                         className="dropdown-details-alignment"
-                        onClick={() =>{ 
-                          setDropOneValue("yes")
-                          errors["dropdownone"] = ""
-                          }}
+                        onClick={() => {
+                          setDropOneValue("yes");
+                          errors["dropdownone"] = "";
+                        }}
                       >
                         <p>Yes</p>
                       </div>
                       <div
                         className="dropdown-details-alignment"
                         onClick={() => {
-                          setDropOneValue("no")
-                          errors["dropdownone"] = ""
-                          }}
+                          setDropOneValue("no");
+                          errors["dropdownone"] = "";
+                        }}
                       >
                         <p>No</p>
                       </div>
                     </div>
-                    
-                    
                   )}
-                      <span
-                      style={{
-                        color: "red",
-                        top: "5px",
-                        fontSize: "12px",
-                      }}
-                    >
-                      {errors["dropdownone"]}
-                    </span>
+                  <span
+                    style={{
+                      color: "red",
+                      top: "5px",
+                      fontSize: "12px",
+                    }}
+                  >
+                    {errors["dropdownone"]}
+                  </span>
                 </div>
-                <div
-                  className="contact-gridItem-alignment one-grid-alignment"
-                  onClick={() => setDropDown2(!dropDown2)}
-                >
-                  <input
-                    type="text"
-                    placeholder="Wie viele Jahre arbeitest du im Vertrieb?"
-                    value={dropTwoValue}
-                  />
-                  <div className="icon-alignment">
-                    <img src={DownArrowBlackIcon} alt="DownArrowBlackIcon" />
-                  </div>
-
-                  {dropDown2 && (
-                    <div className="dropdown-box-alignment">
-                      <div
-                        className="dropdown-details-alignment"
-                        onClick={() => {setDropTwoValue("0")
-                        errors["dropdowntwo"] = ""
-                      }}
-                      >
-                        <p>0</p>
-                      </div>
-                      <div
-                        className="dropdown-details-alignment"
-                        onClick={() =>{ setDropTwoValue("1-3")
-                        errors["dropdowntwo"] = ""
-                      }}
-                      >
-                        <p>1-3</p>
-                      </div>
-                      <div
-                        className="dropdown-details-alignment"
-                        onClick={() => {setDropTwoValue("4-7")
-                        errors["dropdowntwo"] = ""}}
-                      >
-                        <p>4-7</p>
-                      </div>
+                {dropOneValue === "yes" && (
+                  <div
+                    className="contact-gridItem-alignment one-grid-alignment"
+                    onClick={() => setDropDown2(!dropDown2)}
+                  >
+                    <input
+                      type="text"
+                      placeholder="Wie viele Jahre arbeitest du im Vertrieb?"
+                      value={dropTwoValue}
+                    />
+                    <div className="icon-alignment">
+                      <img src={DownArrowBlackIcon} alt="DownArrowBlackIcon" />
                     </div>
-                  )}
-                      <span
+
+                    {dropDown2 && (
+                      <div className="dropdown-box-alignment">
+                        <div
+                          className="dropdown-details-alignment"
+                          onClick={() => {
+                            setDropTwoValue("0");
+                            errors["dropdowntwo"] = "";
+                          }}
+                        >
+                          <p>0</p>
+                        </div>
+                        <div
+                          className="dropdown-details-alignment"
+                          onClick={() => {
+                            setDropTwoValue("1-3");
+                            errors["dropdowntwo"] = "";
+                          }}
+                        >
+                          <p>1-3</p>
+                        </div>
+                        <div
+                          className="dropdown-details-alignment"
+                          onClick={() => {
+                            setDropTwoValue("4-7");
+                            errors["dropdowntwo"] = "";
+                          }}
+                        >
+                          <p>4-7</p>
+                        </div>
+                      </div>
+                    )}
+                    <span
                       style={{
                         color: "red",
                         top: "5px",
@@ -577,10 +595,12 @@ export default function Home() {
                       {errors["dropdowntwo"]}
                     </span>
 
-                  <div className="icon-alignment">
-                    <img src={DownArrowBlackIcon} alt="DownArrowBlackIcon" />
+                    <div className="icon-alignment">
+                      <img src={DownArrowBlackIcon} alt="DownArrowBlackIcon" />
+                    </div>
                   </div>
-                </div>
+                )}
+
                 <div className="conatct-button-alignment">
                   <button onClick={() => submitForm()}>Absenden</button>
                 </div>

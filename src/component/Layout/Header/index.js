@@ -3,8 +3,7 @@ import "./header.scss";
 import Logo from "../../../assets/logo/logo.svg";
 import { useHistory } from "react-router-dom";
 export default function Header() {
-
-  const navigate = useHistory()
+  const navigate = useHistory();
 
   const handleOnClickAuthenticate = () => {
     if (window.location.pathname !== "/") {
@@ -26,10 +25,38 @@ export default function Header() {
                 <li>Standort unabhängig</li>
               </ul>
             </div>
-            <a href="#contactForm" className="jetzt-details-alignment" onClick={handleOnClickAuthenticate} >
+            <a
+              href="#contactForm"
+              className="jetzt-details-alignment"
+              onClick={handleOnClickAuthenticate}
+            >
+              <h6>Jetzt bewerben</h6>
+              <p>in 30 Sek. ohne Lebenslauf</p>
+            </a>
+          </div>
+        </div>
+
+        <div className="mobile-header-alignment">
+          <div className="mobile-view-main-alignment">
+            <div className="mobile-logo-alignment">
+              <img src={Logo} alt="Logo" />
+            </div>
+            <div className="mobile-header-details-alignment">
+              <a
+                href="#contactForm"
+                className="jetzt-details-alignment"
+                onClick={handleOnClickAuthenticate}
+              >
                 <h6>Jetzt bewerben</h6>
                 <p>in 30 Sek. ohne Lebenslauf</p>
-            </a>
+              </a>
+            </div>
+          </div>
+          <div className="mobile-header-option-alignment">
+            <ul>
+              <li>Home-Office</li>
+              <li>Standort unabhängig</li>
+            </ul>
           </div>
         </div>
 

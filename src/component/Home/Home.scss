@@ -39,11 +39,21 @@
       }
 
       @include breakpoint(max-sm) {
-        padding: 10px 0 72px 0;
+        padding: 10px 0 27px 0;
       }
     }
-
-    .envoltecMain-img-alignment {
+  }
+  .envoltecMain-img-alignment {
+    .container {
+      @include breakpoint(max-sm) {
+        padding: 0;
+      }
+    }
+    .envoltecMain-video-alignment {
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
       width: 100%;
       height: 603px;
       @include breakpoint(max-md) {
@@ -59,104 +69,104 @@
         display: block;
       }
     }
-    .envoltecMain-child-details-alignment {
-      padding: 0 50px;
+  }
+  .envoltecMain-child-details-alignment {
+    padding: 0 50px;
+    @include breakpoint(max-md) {
+      padding: 0;
+    }
+    .envoltecMain-button-alignment {
       @include breakpoint(max-md) {
-        padding: 0;
+        padding: 46px 0 0 0;
       }
-      .envoltecMain-button-alignment {
-        @include breakpoint(max-md) {
-          padding: 46px 0 0 0;
-        }
 
-        @include breakpoint(max-md) {
-          padding: 20px 0 0 0;
-        }
-        padding: 62px 0 0 0;
+      @include breakpoint(max-md) {
+        padding: 20px 0 0 0;
+      }
+      padding: 62px 0 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+
+      button {
+        max-width: 250px;
+        width: 250px;
+        height: 66px;
+        background: #df4539;
+        border: 1px solid #df4539;
+        @include font20-bolder;
+        color: #ffffff;
+        cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 30px;
-
-        button {
-          max-width: 250px;
-          width: 250px;
-          height: 66px;
-          background: #df4539;
-          border: 1px solid #df4539;
-          @include font20-bolder;
-          color: #ffffff;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          @include breakpoint(max-md) {
-            max-width: 200px;
-            width: 200px;
-            height: 50px;
-            font-size: 14px;
-            line-height: 22px;
-          }
-
-          @include breakpoint(max-md) {
-            max-width: 150px;
-            width: 150px;
-            height: 40px;
-            font-size: 11px;
-            line-height: 22px;
-          }
-          &:last-child {
-            background: transparent;
-            color: #df4539;
-          }
+        @include breakpoint(max-md) {
+          max-width: 200px;
+          width: 200px;
+          height: 50px;
+          font-size: 14px;
+          line-height: 22px;
         }
-      }
-
-      .envoltecMain-otion-details-alignment {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 60px;
-        padding: 76px 0 0 0;
 
         @include breakpoint(max-md) {
-          gap: 40px;
-          padding: 63px 0 0 0;
+          max-width: 150px;
+          width: 150px;
+          height: 40px;
+          font-size: 11px;
+          line-height: 22px;
         }
-
-        @include breakpoint(max-sm) {
-          gap: 40px;
-          grid-template-columns: 1fr;
-          padding: 36px 0 0 63px;
+        &.second-button {
+          background: transparent;
+          color: #df4539;
         }
-        .envoltecMain-gridItem-alignment {
-          .option-name-alignment {
-            display: flex;
-            align-items: center;
-            gap: 13px;
+      }
+    }
 
-            .option-heading-name {
-              h4 {
-                @include font20-bolder;
-                line-height: 24px;
-                color: #000000;
+    .envoltecMain-otion-details-alignment {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 60px;
+      padding: 76px 0 0 0;
 
-                @include breakpoint(max-md) {
-                  font-size: 14px;
-                  line-height: 17px;
-                }
+      @include breakpoint(max-md) {
+        gap: 40px;
+        padding: 63px 0 0 0;
+      }
+
+      @include breakpoint(max-sm) {
+        gap: 40px;
+        grid-template-columns: 1fr;
+        padding: 36px 0 0 63px;
+      }
+      .envoltecMain-gridItem-alignment {
+        .option-name-alignment {
+          display: flex;
+          align-items: center;
+          gap: 13px;
+
+          .option-heading-name {
+            h4 {
+              @include font20-bolder;
+              line-height: 24px;
+              color: #000000;
+
+              @include breakpoint(max-md) {
+                font-size: 14px;
+                line-height: 17px;
               }
             }
           }
+        }
 
-          .option-details-alignment {
-            padding: 10px 0 0 0;
-            p {
-              @include font14-normal;
-              color: #2e2e2e;
-              @include breakpoint(max-md) {
-                font-size: 10px;
-                line-height: 12px;
-              }
+        .option-details-alignment {
+          padding: 10px 0 0 0;
+          p {
+            @include font14-normal;
+            color: #2e2e2e;
+            @include breakpoint(max-md) {
+              font-size: 10px;
+              line-height: 12px;
             }
           }
         }
@@ -167,12 +177,22 @@
     @include breakpoint(max-md) {
       margin: 74px 0 0 0;
       background: linear-gradient(
-        270deg,
+        360deg,
         #f0f0f0 51.67%,
         rgba(240, 240, 240, 0.378099) 68.61%,
         rgba(240, 240, 240, 0) 100%
       );
     }
+
+    @include breakpoint("max-sm") {
+      background: linear-gradient(
+        360deg,
+        #f0f0f0 51.67%,
+        rgba(240, 240, 240, 0.378099) 68.61%,
+        rgba(240, 240, 240, 0) 100%
+      );
+    }
+
     .envoltecMain-grid-alignment {
       display: grid;
       grid-template-columns: 368px 1fr;
@@ -286,6 +306,7 @@
 
       @include breakpoint("max-sm") {
         grid-template-columns: 1fr;
+        gap: 30px;
       }
       .bearatungsportfolio-gridItem-alignment {
         height: 100%;
@@ -322,12 +343,18 @@
             gap: 30px 18px;
           }
 
+          @include breakpoint(max-sm) {
+            position: relative;
+          }
+
           .bearatungsportfolio-steps-details-alignment {
             .mobile-view-person-img-alignment {
               display: none;
 
               @include breakpoint("max-sm") {
                 display: block;
+                position: absolute;
+                bottom: -37px;
               }
             }
             h6 {
@@ -365,7 +392,7 @@
             img {
               height: 100%;
               @include breakpoint("max-sm") {
-                height: 495px;
+                height: 100%;
               }
             }
           }
@@ -382,7 +409,7 @@
 
             @include breakpoint(max-sm) {
               top: 91px;
-              left: 15px;
+              left: 30px;
             }
             h5 {
               @include font32;
@@ -413,7 +440,7 @@
 
               @include breakpoint(max-sm) {
                 max-width: 291px;
-                padding: 0 10px 0 0;
+                padding: 10px 10px 0 0;
               }
               p {
                 @include font20-bold;
@@ -448,6 +475,9 @@
       padding: 41px 0;
     }
     .liste-banner-details-alignemnt {
+      @include breakpoint(max-sm) {
+        max-width: 316px;
+      }
       h6 {
         @include font40-normal;
         color: #ffffff;
@@ -720,6 +750,7 @@
             font-weight: 300;
             color: #000000;
             width: 100%;
+            border-radius: 0 !important;
             &::placeholder {
               color: #000000;
             }
