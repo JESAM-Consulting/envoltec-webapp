@@ -96,6 +96,7 @@ export default function Home() {
         postalCode: teamData?.postalCode,
         isSales: dropOneValue === "yes" ? true : false,
         workYears: dropTwoValue,
+        project: "Envoltec"
       };
       await ApiPost(`applyNow`, data)
       .then((res) => {
