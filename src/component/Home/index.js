@@ -559,7 +559,7 @@ export default function Home() {
                           errors["dropdownone"] = "";
                         }}
                       >
-                        <p>Neil</p>
+                        <p>Nein</p>
                       </div>
                     </div>
                   )}
