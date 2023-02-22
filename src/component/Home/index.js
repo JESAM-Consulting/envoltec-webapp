@@ -431,7 +431,7 @@ export default function Home() {
             <div className="jetzt-bewerben-heading">
               <h6>Jetzt bewerben</h6>
             </div>
-            {/* <div className="contact-bg"></div> */}
+            <div className="contact-bg"></div>
             <div className="contact-form-alignment">
               <div className="contact-form-heading-alignment">
                 <h5>Deine Kontaktdaten</h5>

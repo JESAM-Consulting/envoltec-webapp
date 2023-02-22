@@ -444,11 +444,15 @@
           // }
           .bearatungsportfolio-side-img-alignment {
             height: 100%;
+            width: 100%;
             img {
               height: 100%;
+              width: 100%;
               object-fit: fill;
               @include breakpoint("max-sm") {
                 height: 100%;
+                width: 100%;
+                object-fit: fill;
               }
             }
           }
@@ -457,6 +461,14 @@
             position: absolute;
             top: 0;
             right: 44px;
+            width: 150px;
+            height: 150px;
+
+            @include breakpoint("max-md") {
+              width: 105px;
+              height: 105px;
+            }
+
 
             @include breakpoint("max-sm") {
               width: 64px;
@@ -472,7 +484,7 @@
 
           .bearatungsportfolio-banner-details-alignment {
             position: absolute;
-            top: 143px;
+            top: 165px;
             left: 90px;
             right: 31px;
             border-right: 5px solid #fff;
@@ -492,7 +504,11 @@
               left: 55px;
             }
             .bearatungsportfolio-details-padding {
-              padding: 0 7px 0 0;
+              padding: 30px 7px 0 0;
+
+              @include breakpoint("max-md") {
+                padding: 0 7px 0 0;
+              }
               h5 {
                 @include font32;
                 color: #df4539;
@@ -529,7 +545,7 @@
                   @include font20-bold;
                   line-height: 22px;
                   color: #ffffff;
-                  padding: 0 0 15px 0;
+                  padding: 0 0 25px 0;
                   font-weight: 400;
                   line-height: 24px;
                   @include breakpoint(max-md) {
