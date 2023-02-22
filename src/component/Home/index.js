@@ -546,7 +546,7 @@ export default function Home() {
                       <div
                         className="dropdown-details-alignment"
                         onClick={() => {
-                          setDropOneValue("yes");
+                          setDropOneValue("Ja");
                           errors["dropdownone"] = "";
                         }}
                       >
@@ -555,11 +555,11 @@ export default function Home() {
                       <div
                         className="dropdown-details-alignment"
                         onClick={() => {
-                          setDropOneValue("no");
+                          setDropOneValue("Nein");
                           errors["dropdownone"] = "";
                         }}
                       >
-                        <p>Neil</p>
+                        <p>Nein</p>
                       </div>
                     </div>
                   )}
@@ -573,7 +573,7 @@ export default function Home() {
                     {errors["dropdownone"]}
                   </span>
                 </div>
-                {dropOneValue === "yes" && (
+                {dropOneValue === "Ja" && (
                   <div
                     className="contact-gridItem-alignment one-grid-alignment"
                     onClick={() => setDropDown2(!dropDown2)}
