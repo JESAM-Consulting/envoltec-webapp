@@ -635,8 +635,8 @@ export default function Home() {
                   </div>
                 )}
 
-                <div className="conatct-button-alignment">
-                  <button onClick={() => submitForm()}>Absenden</button>
+                <div className="conatct-button-alignment"  onClick={() => submitForm()}>
+                  <button>Absenden</button>
                 </div>
               </div>
             </div>
