@@ -469,7 +469,6 @@
               height: 105px;
             }
 
-
             @include breakpoint("max-sm") {
               width: 64px;
               height: 65px;
@@ -795,7 +794,7 @@
 
   .jetzt-bewerben-section {
     padding: 78px 0;
-
+    position: relative;
     @include breakpoint(max-md) {
       padding: 106px 0 76px 0;
     }
@@ -831,7 +830,7 @@
       width: 50%;
       position: absolute;
       right: 0;
-
+      bottom: 98px;
       @include breakpoint("max-md") {
         display: none;
       }
@@ -854,6 +853,7 @@
         max-width: 312px;
       }
       .contact-form-heading-alignment {
+        text-align: center;
         h5 {
           @include text18-normal;
           color: #000000;
@@ -890,25 +890,35 @@
         }
         .two-grid-alignment {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 10px;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 15px;
+          @include breakpoint(max-sm) {
+            gap: 12px;
+          }
         }
         .contact-gridItem-alignment {
           &.one-grid-alignment {
-            padding: 10px 0 0 0;
+            padding: 15px 0 0 0;
             position: relative;
+
+            @include breakpoint(max-sm) {
+              padding: 12px 0 0 0;
+            }
           }
           input {
-            padding: 10px 0;
             border: none;
-            border-bottom: 0.5px solid #000000;
-            @include font14-normal;
+            font-family: "Montserrat";
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
             font-weight: 300;
             color: #000000;
             width: 100%;
-            border-radius: 0 !important;
+            border-radius: 4px !important;
+            padding: 10px;
+            background: rgba(223, 68, 56, 0.05);
             &::placeholder {
-              color: #000000;
+              color: rgba(0, 0, 0, 0.6);
             }
 
             @include breakpoint(max-md) {
@@ -926,9 +936,11 @@
 
           .icon-alignment {
             position: absolute;
-            top: 18px;
+            top: 28px;
             right: 10px;
-
+            @include breakpoint(max-sm) {
+          top: 22px;
+            }
             img {
               width: 13px;
               height: 13px;
@@ -965,7 +977,10 @@
         }
 
         .conatct-button-alignment {
-          padding: 14px 0 0 0;
+          padding: 30px 0 0 0;
+          @include breakpoint("max-md") {
+            padding: 20px 0 0 0;
+          }
           @include breakpoint("max-sm") {
             padding: 20px 0 0 0;
           }
@@ -977,10 +992,10 @@
             font-size: 15px;
             line-height: 18px;
             color: #ffffff;
-            padding: 8px 20px;
+            padding: 15px 20px;
             border: none;
             cursor: pointer;
-
+            width: 100%;
             @include breakpoint("max-sm") {
               font-weight: 700;
               font-size: 10px;
