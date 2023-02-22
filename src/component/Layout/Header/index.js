@@ -19,12 +19,12 @@ export default function Header() {
           </div>
 
           <div className="header-details-alignment">
-            <div className="header-nav-alignment">
+            {/* <div className="header-nav-alignment">
               <ul>
                 <li>Home-Office</li>
                 <li>Standort unabhängig</li>
               </ul>
-            </div>
+            </div> */}
             <a
               href="#contactForm"
               className="jetzt-details-alignment"
@@ -52,12 +52,12 @@ export default function Header() {
               </a>
             </div>
           </div>
-          <div className="mobile-header-option-alignment">
+          {/* <div className="mobile-header-option-alignment">
             <ul>
               <li>Home-Office</li>
               <li>Standort unabhängig</li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="heading-alignment">

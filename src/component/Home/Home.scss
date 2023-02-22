@@ -44,6 +44,12 @@
     }
   }
   .envoltecMain-img-alignment {
+    @include breakpoint(max-md) {
+      padding: 0 30px;
+    }
+    @include breakpoint(max-sm) {
+      padding: 0;
+    }
     .container {
       @include breakpoint(max-sm) {
         padding: 0;
@@ -73,6 +79,9 @@
   .envoltecMain-child-details-alignment {
     padding: 0 50px;
     @include breakpoint(max-md) {
+      padding: 0 30px;
+    }
+    @include breakpoint("max-sm") {
       padding: 0;
     }
     .envoltecMain-button-alignment {
@@ -80,7 +89,7 @@
         padding: 46px 0 0 0;
       }
 
-      @include breakpoint(max-md) {
+      @include breakpoint(max-sm) {
         padding: 20px 0 0 0;
       }
       padding: 62px 0 0 0;
@@ -137,13 +146,20 @@
       @include breakpoint(max-sm) {
         gap: 40px;
         grid-template-columns: 1fr;
-        padding: 36px 0 0 63px;
+        padding: 36px 0 0 43px;
       }
       .envoltecMain-gridItem-alignment {
         .option-name-alignment {
           display: flex;
           align-items: center;
           gap: 13px;
+
+          .option-arrow-alignment {
+            img {
+              width: 16px;
+              min-width: 16px;
+            }
+          }
 
           .option-heading-name {
             h4 {
@@ -154,6 +170,7 @@
               @include breakpoint(max-md) {
                 font-size: 14px;
                 line-height: 17px;
+                white-space: nowrap;
               }
             }
           }
@@ -161,6 +178,10 @@
 
         .option-details-alignment {
           padding: 10px 0 0 0;
+          max-width: 334px;
+          @include breakpoint(max-md) {
+            max-width: 200px;
+          }
           p {
             @include font14-normal;
             color: #2e2e2e;
@@ -202,9 +223,11 @@
       @include breakpoint(max-md) {
         gap: 39px;
         grid-template-columns: 206px 1fr;
+        padding: 0 0 0 48px;
       }
       @include breakpoint(max-sm) {
         grid-template-columns: 1fr;
+        padding: 0;
       }
 
       .envoltecMain-gridItem-alignment {
@@ -242,6 +265,9 @@
           }
 
           .envoltecMain-person-child-details-alignment {
+            @include breakpoint("max-md") {
+              max-width: 391px;
+            }
             p {
               @include font16-normal;
               color: #42546c;
@@ -275,6 +301,8 @@
                 line-height: 14px;
                 padding: 8px 19.5px;
                 font-size: 10px;
+                max-width: 291px;
+                margin: auto;
                 line-height: 22px;
               }
             }
@@ -285,18 +313,22 @@
   }
 
   .bearatungsportfolio-section {
-    padding: 28px 0 0 0;
+    padding: 0;
     @include breakpoint(max-md) {
       padding: 186px 0 0 0;
     }
     @include breakpoint(max-sm) {
-      padding: 26px 0 0 10px;
+      padding: 26px 0 0 0;
+      .container {
+        width: 100%;
+        padding: 0;
+      }
     }
 
     .bearatungsportfolio-grid-alignment {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 80px;
+      gap: 84px;
       align-items: center;
 
       @include breakpoint("max-md") {
@@ -311,7 +343,17 @@
       }
       .bearatungsportfolio-gridItem-alignment {
         height: 100%;
+        // @include breakpoint("max-sm") {
+        //   max-width: 340px;
+        //   margin: auto;
+        // }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .bearatungsportfolio-heading-alignment {
+          @include breakpoint("max-sm") {
+            padding: 0 15px;
+          }
           h5 {
             @include font30;
             color: #df4539;
@@ -340,7 +382,7 @@
           padding: 80px 0 0 0;
 
           @include breakpoint(max-md) {
-            padding: 30px 0 0 0;
+            padding: 31px 15px 0 15px;
             gap: 30px 18px;
           }
 
@@ -356,6 +398,11 @@
                 display: block;
                 position: absolute;
                 bottom: -37px;
+
+                img {
+                  width: 194px;
+                  height: 274px;
+                }
               }
             }
             h6 {
@@ -388,13 +435,38 @@
         .bearatungsportfolio-side-details-alignment {
           position: relative;
           height: 100%;
+          top: -20px;
+          @include breakpoint("max-md") {
+            top: 0;
+          }
+          // @include breakpoint("max-sm") {
+          //   display: none;
+          // }
           .bearatungsportfolio-side-img-alignment {
             height: 100%;
             img {
               height: 100%;
+              object-fit: fill;
               @include breakpoint("max-sm") {
                 height: 100%;
               }
+            }
+          }
+
+          .broschure-logo-alignment {
+            position: absolute;
+            top: 0;
+            right: 44px;
+
+            @include breakpoint("max-sm") {
+              width: 64px;
+              height: 65px;
+              right: 29px;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
             }
           }
 
@@ -402,58 +474,107 @@
             position: absolute;
             top: 143px;
             left: 90px;
-
-            @include breakpoint(max-md) {
+            right: 31px;
+            border-right: 5px solid #fff;
+            @include breakpoint("max-md") {
               top: 117px;
-              left: 56px;
+              left: 55px;
+              right: 21px;
+            }
+
+            @media only screen and (max-width: "375px") {
+              top: 60px;
+              left: 35px;
             }
 
             @include breakpoint(max-sm) {
               top: 91px;
-              left: 30px;
+              left: 55px;
             }
-            h5 {
-              @include font32;
-              color: #df4539;
-              @include breakpoint(max-md) {
-                font-size: 20px;
-                line-height: 18px;
-              }
-            }
-
-            p {
-              padding: 12px 0 0 0;
-              @include font40-bolder;
-              color: #ffffff;
-
-              @include breakpoint(max-md) {
-                font-size: 36px;
-                line-height: 26px;
-              }
-            }
-
-            .other-details-alignment {
-              padding: 23px 0 0 0;
-              max-width: 415px;
-              @include breakpoint(max-md) {
-                max-width: 327px;
-              }
-
-              @include breakpoint(max-sm) {
-                max-width: 291px;
-                padding: 10px 10px 0 0;
-              }
-              p {
-                @include font20-bold;
-                line-height: 22px;
-                color: #ffffff;
-                padding: 0 0 15px 0;
-
+            .bearatungsportfolio-details-padding {
+              padding: 0 7px 0 0;
+              h5 {
+                @include font32;
+                color: #df4539;
                 @include breakpoint(max-md) {
-                  font-size: 14px;
-                  line-height: 22px;
+                  font-size: 20px;
+                  line-height: 18px;
                 }
               }
+
+              p {
+                padding: 12px 0 0 0;
+                @include font40-bolder;
+                color: #ffffff;
+
+                @include breakpoint(max-md) {
+                  font-size: 36px;
+                  line-height: 26px;
+                }
+              }
+
+              .other-details-alignment {
+                padding: 30px 0 0 0;
+                max-width: 415px;
+                @include breakpoint(max-md) {
+                  max-width: 327px;
+                }
+
+                @include breakpoint(max-sm) {
+                  max-width: 291px;
+                  padding: 10px 10px 0 0;
+                }
+
+                p {
+                  @include font20-bold;
+                  line-height: 22px;
+                  color: #ffffff;
+                  padding: 0 0 15px 0;
+                  font-weight: 400;
+                  line-height: 24px;
+                  @include breakpoint(max-md) {
+                    font-size: 14px;
+                    line-height: 22px;
+                  }
+                  @media only screen and (max-width: "375px") {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .bearatungsportfolio-phone {
+          // background-color: #000000;
+          background-image: url(../../assets/images/Broschure.png);
+          background-size: cover;
+          padding: 80px 35px 50px;
+          background-position: center top;
+          display: none;
+          @include breakpoint("max-sm") {
+            display: block;
+          }
+          .text-box {
+            h5 {
+              font-family: "Poppins", sans-serif;
+              font-weight: 300;
+              font-size: 20px;
+              line-height: 18px;
+              color: #df4539;
+            }
+            h4 {
+              font-size: 36px;
+              line-height: 26px;
+              font-family: "Poppins", sans-serif;
+              font-weight: 700;
+              color: #fff;
+              padding: 18px 0;
+            }
+            p {
+              font-size: 14px;
+              line-height: 22px;
+              color: #fff;
+              padding: 0 0 15px;
             }
           }
         }
@@ -515,9 +636,9 @@
     background: url("../../assets/images/solarBg.png");
     width: 100%;
     height: 433px;
-    background-size: cover;
+    // background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    // background-position: center;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -525,6 +646,7 @@
     border-bottom: 1px solid #df4438;
     @include breakpoint(max-md) {
       height: 260px;
+      background: url("../../assets/images/solar-tb-bg.png");
     }
 
     @include breakpoint(max-sm) {
@@ -646,6 +768,10 @@
           color: #df4539;
           cursor: pointer;
           background: transparent;
+
+          @include breakpoint("max-sm") {
+            padding: 10px 16px;
+          }
         }
       }
     }
@@ -707,13 +833,20 @@
       }
 
       @include breakpoint(max-sm) {
-        width: 100%;
+        width: 312px;
         margin: 20px auto;
+        max-width: 312px;
       }
       .contact-form-heading-alignment {
         h5 {
           @include text18-normal;
           color: #000000;
+
+          @include breakpoint("max-sm") {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+          }
         }
 
         p {
@@ -724,6 +857,12 @@
           color: #000000;
           @include breakpoint(max-md) {
             padding: 10px 0 0 0;
+          }
+
+          @include breakpoint("max-sm") {
+            font-weight: 300;
+            font-size: 10px;
+            line-height: 15px;
           }
         }
       }
@@ -761,6 +900,12 @@
               font-size: 12px;
               line-height: 15px;
             }
+
+            @include breakpoint("max-sm") {
+              font-weight: 300;
+              font-size: 9px;
+              line-height: 11px;
+            }
           }
 
           .icon-alignment {
@@ -778,13 +923,16 @@
 
           .dropdown-box-alignment {
             position: absolute;
-            top: 51px;
-            width: 100%;
+            top: 50px;
+            width: max-content;
             height: auto;
             background: #ffffff;
             padding: 10px 20px;
             z-index: 99;
             border-radius: 10px;
+            box-shadow: 0px 0px 24px rgb(0 0 0 / 10%);
+            text-align: center;
+            right: 0;
             .dropdown-details-alignment {
               border-bottom: 0.5px solid #000000;
               &:last-child {
@@ -793,7 +941,8 @@
               p {
                 @include font14-normal;
                 font-weight: 300;
-                padding: 10px 0;
+                padding: 5px 20px;
+                cursor: pointer;
               }
             }
           }
@@ -801,6 +950,9 @@
 
         .conatct-button-alignment {
           padding: 14px 0 0 0;
+          @include breakpoint("max-sm") {
+            padding: 20px 0 0 0;
+          }
           button {
             background: #df4438;
             border-radius: 5px;
@@ -812,6 +964,12 @@
             padding: 8px 20px;
             border: none;
             cursor: pointer;
+
+            @include breakpoint("max-sm") {
+              font-weight: 700;
+              font-size: 10px;
+              line-height: 12px;
+            }
           }
         }
       }

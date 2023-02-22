@@ -13,7 +13,9 @@ export default function Footer() {
                 <img src={FooterLogo} alt="FooterLogo" />
               </div>
               <div className="footer-address-alignment ">
-                <p>Paul-Thiersch-Straße 11 04435 Schkeuditz</p>
+                <p>
+                  Paul-Thiersch-Straße 11 <br /> 04435 Schkeuditz
+                </p>
               </div>
             </div>
             <div className="footer-details-alignment">

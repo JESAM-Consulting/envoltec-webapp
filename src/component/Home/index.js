@@ -4,6 +4,7 @@ import DownArrowIcon from "../../assets/icons/down-arrow-red.svg";
 import DownArrowBlackIcon from "../../assets/icons/down-arrow.svg";
 import RightArrowIcon from "../../assets/icons/rightArrow.svg";
 import EnvoltecImg from "../../assets/images/envoltec-img.png";
+import EnvoltecLogo from "../../assets/images/Broschure-logo.png";
 import PersonImg from "../../assets/images/person-img.png";
 import MobilePersonImg from "../../assets/images/mobileView-peson.png";
 import BroschureImg from "../../assets/images/Broschure.png";
@@ -96,7 +97,6 @@ export default function Home() {
         postalCode: teamData?.postalCode,
         isSales: dropOneValue === "yes" ? true : false,
         workYears: dropTwoValue,
-        project: "Envoltec"
       };
       await ApiPost(`applyNow`, data).then((res) => {
         toast.success(
@@ -159,7 +159,7 @@ export default function Home() {
             <div className="envoltecMain-otion-details-alignment">
               <div className="envoltecMain-gridItem-alignment">
                 <div className="option-name-alignment">
-                  <div>
+                  <div className="option-arrow-alignment">
                     <img src={RightArrowIcon} alt="RightArrowIcon" />
                   </div>
                   <div className="option-heading-name">
@@ -216,14 +216,18 @@ export default function Home() {
                   <div className="envoltecMain-person-child-details-alignment">
                     <p>
                       Mit einer Photovoltaik Anlage von Envoltec werden deine
-                      Kunden unabhängig von steigenden Energiekosten. Jede neue
-                      Anlage die wir erbauen ist ein Schritt in die Zukunft.
+                      Kunden <br />
+                      unabhängig von steigenden Energiekosten. <br />
+                      Jede neue Anlage die wir erbauen ist ein Schritt in die
+                      Zukunft.
                     </p>
                     <p>
                       Wir sind der Ansprechpartner für den Traum einer eigenen
-                      Photovoltaik-Anlage, egal in welcher Form, dem Budget und
-                      der Größe.Aufgrund starker Partner kannst du alle Kunden
-                      mit dem passenden Produkt beraten.
+                      Photovoltaik- <br />
+                      Anlage, egal in welcher Form, dem Budget und der Größe.{" "}
+                      <br />
+                      Aufgrund starker Partner kannst du alle Kunden mit dem
+                      passenden Produkt beraten.
                     </p>
                   </div>
                   <div className="envoltec-button-alignment">
@@ -325,31 +329,59 @@ export default function Home() {
                   <div className="bearatungsportfolio-side-img-alignment">
                     <img src={BroschureImg} alt="BroschureImg" />
                   </div>
+                  <div className="broschure-logo-alignment">
+                    <img src={EnvoltecLogo} alt="EnvoltecLogo" />
+                  </div>
                   <div className="bearatungsportfolio-banner-details-alignment">
-                    <h5>Wer wir sind?</h5>
-                    <p>Envoltec</p>
+                    <div className="bearatungsportfolio-details-padding">
+                      <h5>Wer wir sind?</h5>
+                      <p>Envoltec</p>
 
-                    <div className="other-details-alignment">
-                      <p>
-                        Das Konzept von Envoltec lautet: „Erneuerbare Energie
-                        für Jedermann!"
-                      </p>
-                      <p>
-                        Unseren Kunden soll der Einstieg in die unabhängige
-                        Stromversorgung so einfach wie möglich gestaltet werden.
-                        Aus diesem Grund führen wir Sie bei allen Schritten
-                        strukturiert, transparent und zuverlässig durch den
-                        Prozessablauf.
-                      </p>
-                      <p>
-                        Von der Erstberatung, der Installation Ihrer Anlage bis
-                        hin zur Anlagenpflege und Wartung sowie weiteren
-                        Serviceleistungen ,haben Sie immer einen Ansprechpartner
-                        bei uns!
-                      </p>
+                      <div className="other-details-alignment">
+                        <p>
+                          Das Konzept von Envoltec lautet: „Erneuerbare Energie
+                          für Jedermann!"
+                        </p>
+                        <p>
+                          Unseren Kunden soll der Einstieg in die unabhängige
+                          Stromversorgung so einfach wie möglich gestaltet
+                          werden. Aus diesem Grund führen wir Sie bei allen
+                          Schritten strukturiert, transparent und zuverlässig
+                          durch den Prozessablauf.
+                        </p>
+                        <p>
+                          Von der Erstberatung, der Installation Ihrer Anlage
+                          bis hin zur Anlagenpflege und Wartung sowie weiteren
+                          Serviceleistungen ,haben Sie immer einen
+                          Ansprechpartner bei uns!
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
+                {/* <div className="bearatungsportfolio-phone">
+                  <div className="text-box">
+                    <h5>Wer wir sind?</h5>
+                    <h4>Envoltec</h4>
+                    <p>
+                      Das Konzept von Envoltec lautet: „Erneuerbare Energie für
+                      Jedermann!"
+                    </p>
+                    <p>
+                      Unseren Kunden soll der Einstieg in die unabhängige
+                      Stromversorgung so einfach wie möglich gestaltet werden.
+                      Aus diesem Grund führen wir Sie bei allen Schritten
+                      strukturiert, transparent und zuverlässig durch den
+                      Prozessablauf.
+                    </p>
+                    <p>
+                      Von der Erstberatung, der Installation Ihrer Anlage bis
+                      hin zur Anlagenpflege und Wartung sowie weiteren
+                      Serviceleistungen ,haben Sie immer einen Ansprechpartner
+                      bei uns!
+                    </p>
+                  </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -518,7 +550,7 @@ export default function Home() {
                           errors["dropdownone"] = "";
                         }}
                       >
-                        <p>Yes</p>
+                        <p>Ja</p>
                       </div>
                       <div
                         className="dropdown-details-alignment"
@@ -527,7 +559,7 @@ export default function Home() {
                           errors["dropdownone"] = "";
                         }}
                       >
-                        <p>No</p>
+                        <p>Neil</p>
                       </div>
                     </div>
                   )}
