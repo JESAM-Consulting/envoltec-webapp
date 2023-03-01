@@ -15,13 +15,14 @@
       @include font20-bold;
       color: #000000;
       text-align: center;
+      
       @include breakpoint(max-md) {
         font-size: 14px;
       }
 
       @include breakpoint(max-sm) {
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 20px;
       }
       p {
         font-weight: 400;
@@ -119,10 +120,10 @@
         }
 
         @include breakpoint(max-md) {
-          max-width: 150px;
+          max-width: 190px;
           width: 150px;
           height: 40px;
-          font-size: 12px;
+          font-size: 14px;
           line-height: 22px;
         }
         &.second-button {
@@ -168,7 +169,7 @@
               color: #000000;
 
               @include breakpoint(max-md) {
-                font-size: 14px;
+                font-size: 16px;
                 line-height: 17px;
                 white-space: nowrap;
               }
@@ -186,8 +187,8 @@
             @include font14-normal;
             color: #2e2e2e;
             @include breakpoint(max-md) {
-              font-size: 10px;
-              line-height: 12px;
+              font-size: 14px;
+              line-height: 16px;
             }
           }
         }
@@ -274,7 +275,7 @@
               color: #42546c;
               padding: 0 0 20px 0;
               @include breakpoint(max-md) {
-                font-size: 10px;
+                font-size: 14px;
                 line-height: 14px;
                 padding: 0 0 10px 0;
               }
@@ -293,15 +294,15 @@
               cursor: pointer;
               border: none;
               @include breakpoint(max-md) {
-                font-size: 10px;
+                font-size: 12px;
                 line-height: 14px;
                 padding: 12px 20px;
               }
               @include breakpoint(max-sm) {
-                font-size: 10px;
+                font-size: 12px;
                 line-height: 14px;
                 padding: 8px 19.5px;
-                font-size: 10px;
+                font-size: 14px;
                 max-width: 291px;
                 margin: auto;
                 line-height: 22px;
@@ -563,7 +564,7 @@
                     line-height: 22px;
                   }
                   @media only screen and (max-width: "375px") {
-                    font-size: 12px;
+                    font-size: 14px;
                   }
                 }
               }
