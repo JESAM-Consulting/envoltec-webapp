@@ -15,7 +15,7 @@
       @include font20-bold;
       color: #000000;
       text-align: center;
-      
+
       @include breakpoint(max-md) {
         font-size: 14px;
       }
@@ -524,8 +524,8 @@
                 @include font32;
                 color: #df4539;
                 @include breakpoint(max-md) {
-                  font-size: 20px;
-                  line-height: 18px;
+                  font-size: 22px;
+                  line-height: 20px;
                 }
               }
 
@@ -535,8 +535,8 @@
                 color: #ffffff;
 
                 @include breakpoint(max-md) {
-                  font-size: 36px;
-                  line-height: 26px;
+                  font-size: 40px;
+                  line-height: 30px;
                 }
               }
 
@@ -559,8 +559,9 @@
                   padding: 0 0 25px 0;
                   font-weight: 400;
                   line-height: 24px;
+
                   @include breakpoint(max-md) {
-                    font-size: 14px;
+                    font-size: 16px;
                     line-height: 22px;
                   }
                   @media only screen and (max-width: "375px") {
@@ -826,7 +827,7 @@
         }
 
         @include breakpoint(max-sm) {
-          font-size: 20px;
+          font-size: 24px;
           line-height: 34px;
         }
       }
