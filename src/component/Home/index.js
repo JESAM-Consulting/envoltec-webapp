@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Home.scss";
 import DownArrowIcon from "../../assets/icons/down-arrow-red.svg";
 import DownArrowBlackIcon from "../../assets/icons/down-arrow.svg";
@@ -13,6 +13,8 @@ import { useHistory, useNavigate } from "react-router-dom";
 import { ApiPost } from "../../src/helpers/API/ApiData";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
+import { useIntersection } from "@mantine/hooks";
 
 export default function Home() {
   const navigate = useHistory();
@@ -27,7 +29,14 @@ export default function Home() {
     email: "",
     phone: "",
   });
+
   const [errors, setErrors] = useState({});
+
+  const containerRef = useRef();
+  const { ref, entry } = useIntersection({
+    root: containerRef.current,
+    threshold: 1,
+  });
 
   console.log("errors", errors);
 
@@ -97,7 +106,7 @@ export default function Home() {
         postalCode: teamData?.postalCode,
         isSales: dropOneValue === "yes" ? true : false,
         workYears: dropTwoValue,
-        project: "Envoltec"
+        project: "Envoltec",
       };
       await ApiPost(`applyNow`, data).then((res) => {
         toast.success(
@@ -121,7 +130,21 @@ export default function Home() {
 
       <div className="envoltec-section">
         <div className="container">
-          <div className="envoltec-alignment">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -50,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+
+              transition: {
+                duration: 1,
+                ease: "easeInOut",
+              },
+            }}
+            className="envoltec-alignment">
             <h2>
               Deine Karriere bei Envoltec
               <p>Deine Aufgaben in einem kurzen Video</p>
@@ -130,7 +153,7 @@ export default function Home() {
             <div className="bottom-arrow-alignment">
               <img src={DownArrowIcon} alt="DownArrowIcon" />
             </div>
-          </div>
+          </motion.div>
         </div>
         <div className="envoltecMain-img-alignment">
           <div className="container">
@@ -139,10 +162,9 @@ export default function Home() {
                 src="https://player.vimeo.com/video/800816128?h=99ef65f16a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                 frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
                 // style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                title="Envoltec"
-              ></iframe>
+                title="Envoltec"></iframe>
 
               <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
@@ -251,8 +273,12 @@ export default function Home() {
                   <p>Envoltec!</p>
                 </div>
 
-                <div className="bearatungsportfolio-steps-alignment">
-                  <div className="bearatungsportfolio-steps-details-alignment">
+                <motion.div
+                  ref={containerRef}
+                  className="bearatungsportfolio-steps-alignment">
+                  <motion.div
+                    ref={ref}
+                    className="bearatungsportfolio-steps-details-alignment">
                     <h6>01</h6>
 
                     <div className="steps-child-details">
@@ -262,7 +288,7 @@ export default function Home() {
                         Art der Stromproduktion.
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                   <div className="bearatungsportfolio-steps-details-alignment">
                     <h6>02</h6>
 
@@ -322,7 +348,7 @@ export default function Home() {
                       <img src={MobilePersonImg} alt="MobilePersonImg" />
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
 
               <div className="bearatungsportfolio-gridItem-alignment">
@@ -457,8 +483,7 @@ export default function Home() {
                         color: "red",
                         top: "5px",
                         fontSize: "12px",
-                      }}
-                    >
+                      }}>
                       {errors["userName"]}
                     </span>
                   </div>
@@ -480,8 +505,7 @@ export default function Home() {
                         color: "red",
                         top: "5px",
                         fontSize: "12px",
-                      }}
-                    >
+                      }}>
                       {errors["postalCode"]}
                     </span>
                   </div>
@@ -501,8 +525,7 @@ export default function Home() {
                         color: "red",
                         top: "5px",
                         fontSize: "12px",
-                      }}
-                    >
+                      }}>
                       {errors["email"]}
                     </span>
                   </div>
@@ -523,16 +546,14 @@ export default function Home() {
                         color: "red",
                         top: "5px",
                         fontSize: "12px",
-                      }}
-                    >
+                      }}>
                       {errors["phone"]}
                     </span>
                   </div>
                 </div>
                 <div
                   className="contact-gridItem-alignment one-grid-alignment"
-                  onClick={() => setDropDown1(!dropDown1)}
-                >
+                  onClick={() => setDropDown1(!dropDown1)}>
                   <input
                     type="text"
                     placeholder="Hast du bereits Vertriebserfahrung?"
@@ -549,8 +570,7 @@ export default function Home() {
                         onClick={() => {
                           setDropOneValue("Ja");
                           errors["dropdownone"] = "";
-                        }}
-                      >
+                        }}>
                         <p>Ja</p>
                       </div>
                       <div
@@ -558,8 +578,7 @@ export default function Home() {
                         onClick={() => {
                           setDropOneValue("Nein");
                           errors["dropdownone"] = "";
-                        }}
-                      >
+                        }}>
                         <p>Nein</p>
                       </div>
                     </div>
@@ -569,16 +588,14 @@ export default function Home() {
                       color: "red",
                       top: "5px",
                       fontSize: "12px",
-                    }}
-                  >
+                    }}>
                     {errors["dropdownone"]}
                   </span>
                 </div>
                 {dropOneValue === "Ja" && (
                   <div
                     className="contact-gridItem-alignment one-grid-alignment"
-                    onClick={() => setDropDown2(!dropDown2)}
-                  >
+                    onClick={() => setDropDown2(!dropDown2)}>
                     <input
                       type="text"
                       placeholder="Wie viele Jahre arbeitest du im Vertrieb?"
@@ -595,8 +612,7 @@ export default function Home() {
                           onClick={() => {
                             setDropTwoValue("0");
                             errors["dropdowntwo"] = "";
-                          }}
-                        >
+                          }}>
                           <p>0</p>
                         </div>
                         <div
@@ -604,8 +620,7 @@ export default function Home() {
                           onClick={() => {
                             setDropTwoValue("1-3");
                             errors["dropdowntwo"] = "";
-                          }}
-                        >
+                          }}>
                           <p>1-3</p>
                         </div>
                         <div
@@ -613,8 +628,7 @@ export default function Home() {
                           onClick={() => {
                             setDropTwoValue("4-7");
                             errors["dropdowntwo"] = "";
-                          }}
-                        >
+                          }}>
                           <p>4-7</p>
                         </div>
                       </div>
@@ -624,8 +638,7 @@ export default function Home() {
                         color: "red",
                         top: "5px",
                         fontSize: "12px",
-                      }}
-                    >
+                      }}>
                       {errors["dropdowntwo"]}
                     </span>
 
@@ -635,7 +648,9 @@ export default function Home() {
                   </div>
                 )}
 
-                <div className="conatct-button-alignment"  onClick={() => submitForm()}>
+                <div
+                  className="conatct-button-alignment"
+                  onClick={() => submitForm()}>
                   <button>Absenden</button>
                 </div>
               </div>

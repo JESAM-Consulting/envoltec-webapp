@@ -14,10 +14,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 64px 50px 0 0;
-    @include breakpoint(max-md) {
+    padding: 40px 50px 0 0;
+    
+    @include breakpoint("max-md") {
       padding: 58px 0 0 0;
     }
+
+    
+
     @include breakpoint(max-sm) {
       align-items: flex-start;
       gap: 64px;
@@ -120,7 +124,7 @@
     display: none;
     @include breakpoint("max-sm") {
       display: block;
-      padding: 51px 0 0 0;
+      padding: 30px 0 0 0;
     }
     .mobile-view-main-alignment {
       display: flex;
@@ -144,14 +148,14 @@
           h6 {
             @include font20-bolder;
             color: #ffffff;
-            font-size: 10px;
+            font-size: 12px;
             line-height: 16px;
           }
 
           p {
             @include font15-normal;
             color: #ffffff;
-            font-size: 10px;
+            font-size: 12px;
             line-height: 10px;
             white-space: nowrap;
           }
@@ -186,13 +190,14 @@
     padding: 78px 0 0 0;
     max-width: 1030px;
     margin: auto;
+
     @include breakpoint(max-md) {
       padding: 46px 0 0 0;
       max-width: 556px;
     }
 
     @include breakpoint(max-sm) {
-      padding: 43px 0 0 0;
+      padding: 60px 0 0 0;
       max-width: 274px;
     }
     h1 {
@@ -211,7 +216,7 @@
         }
 
         @include breakpoint(max-sm) {
-          font-size: 24px;
+          font-size: 26px;
           line-height: 24px;
         }
       }
@@ -225,7 +230,7 @@
       }
 
       @include breakpoint(max-sm) {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 16px;
       }
     }

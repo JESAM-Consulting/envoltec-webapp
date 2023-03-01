@@ -20,7 +20,7 @@
       }
 
       @include breakpoint(max-sm) {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 18px;
       }
       p {
@@ -251,6 +251,7 @@
             padding: 0 0 38px 0;
           }
           @include breakpoint(max-sm) {
+            display: none;
             padding: 0 0 40px 20px;
           }
           h4 {
@@ -389,7 +390,17 @@
           @include breakpoint(max-sm) {
             position: relative;
           }
+          .card-1{
+            transform: translateX(-100px);
+            opacity: 0;
+            transition: all 0.3s ease-in-out 1;
 
+          }
+
+          .card-1.inview{
+            transform: translateX(0px);
+            opacity: 1;
+          }
           .bearatungsportfolio-steps-details-alignment {
             .mobile-view-person-img-alignment {
               display: none;
@@ -608,7 +619,7 @@
     }
 
     @include breakpoint(max-sm) {
-      margin: 16px 0 0 0;
+      margin: 0 0 0 0;
       padding: 41px 0;
     }
     .liste-banner-details-alignemnt {

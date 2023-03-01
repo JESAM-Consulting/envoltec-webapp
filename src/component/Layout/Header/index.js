@@ -2,6 +2,8 @@ import React from "react";
 import "./header.scss";
 import Logo from "../../../assets/logo/logo.svg";
 import { useHistory } from "react-router-dom";
+import { motion } from "framer-motion";
+
 export default function Header() {
   const navigate = useHistory();
 
@@ -28,8 +30,7 @@ export default function Header() {
             <a
               href="#contactForm"
               className="jetzt-details-alignment"
-              onClick={handleOnClickAuthenticate}
-            >
+              onClick={handleOnClickAuthenticate}>
               <h6>Jetzt bewerben</h6>
               <p>in 30 Sek. ohne Lebenslauf</p>
             </a>
@@ -45,8 +46,7 @@ export default function Header() {
               <a
                 href="#contactForm"
                 className="jetzt-details-alignment"
-                onClick={handleOnClickAuthenticate}
-              >
+                onClick={handleOnClickAuthenticate}>
                 <h6>Jetzt bewerben</h6>
                 <p>in 30 Sek. ohne Lebenslauf</p>
               </a>
@@ -61,10 +61,23 @@ export default function Header() {
         </div>
 
         <div className="heading-alignment">
-          <h1>
+          <motion.h1
+            initial={{
+              opacity: 0,
+              x: -100,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+
+              transition: {
+                duration: 1,
+                ease: "linear",
+              },
+            }}>
             <span>Werde</span> <span>Energieberater</span> unabhängig werden,
             Stromkosten reduzieren und gemeinsam eine saubere Zukunft gestalten.
-          </h1>
+          </motion.h1>
         </div>
       </div>
     </div>
