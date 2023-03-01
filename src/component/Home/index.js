@@ -416,8 +416,8 @@ export default function Home() {
         <div className="liste-banner-section">
           <div className="liste-banner-details-alignemnt">
             <h6>Die Liste unserer Leistungen endet hier nicht.</h6>
-            <a>
-              Mehr erfahren
+            <a href="#contactForm">
+              Jetzt bewerben
               <div>
                 <img src={WhiteRightArrowIcon} alt="WhiteRightArrowIcon" />
               </div>
@@ -447,9 +447,9 @@ export default function Home() {
               Unseren Kunden soll der Einstieg in eineunabhängige
               Stromversorgung so einfachwie möglich gestaltet werden.
             </p>
-            <div className="solar-button-alignment">
+            {/* <div className="solar-button-alignment">
               <button>Jetzt bewerben</button>
-            </div>
+            </div> */}
           </div>
         </div>
 

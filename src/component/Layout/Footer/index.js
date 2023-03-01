@@ -22,15 +22,23 @@ export default function Footer() {
               <div className="contact-alignment">
                 <h6>
                   So erreichst du uns.
-                  <p>info@envoltec.de</p>
-                  <p>03420/4397830</p>
+                  <p>
+                    <a href="mailto:Janik.voss@envoltec.de">
+                      Janik.voss@envoltec.de
+                    </a>
+                  </p>
+                  <p>
+                    <a href="tel:01734181750">01734181750</a>
+                  </p>
                 </h6>
               </div>
 
               <div className="copyRight-other-details-alignmet">
                 <p>Bewirb dich bei uns! Werde ein Teil von ENVOLTEC</p>
                 <div className="name-alignment">
-                  <span>Jetzt bewerben</span>
+                  <span>
+                    <a href="#contactForm">Jetzt bewerben</a>
+                  </span>
                   <img src={RightArrow} alt="RightArrow" />
                 </div>
                 <p>Copyright © 2022 ENVOLTEC. Alle Rechte vorbehalten.</p>

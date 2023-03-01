@@ -859,9 +859,9 @@
       }
 
       @include breakpoint(max-sm) {
-        width: 312px;
+        width: 360px;
         margin: 20px auto;
-        max-width: 312px;
+        max-width: 360px;
       }
       .contact-form-heading-alignment {
         text-align: center;
@@ -904,7 +904,7 @@
           grid-template-columns: repeat(1, 1fr);
           gap: 15px;
           @include breakpoint(max-sm) {
-            gap: 12px;
+            gap: 16px;
           }
         }
         .contact-gridItem-alignment {
